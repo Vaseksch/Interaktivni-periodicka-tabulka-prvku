@@ -1,0 +1,118 @@
+1;H ;Hydrogen;Hydrogenium;1.008;2.20
+2;He;Helium;Helium;4.003;N/A
+3;Li;Lithium;Lithium;6.941;0.98
+4;Be;Beryllium;Beryllium;9.012;1.57
+5;B ;Boron;Bor;10.811;2.04
+6;C ;Carbon;Uhlik;12.011;2.55
+7;N ;Nitrogen;Dusik;14.007;3.04
+8;O ;Oxygen;Kyslik;15.999;3.44
+9;F ;Fluorine;Fluor;18.998;3.98
+10;Ne;Neon;Neon;20.179;N/A
+11;Na;Sodium;Natrium;22.990;0.93
+12;Mg;Magnesium;Magnesium;24.305;1.31
+13;Al;Aluminum;Hlinik;26.982;1.61
+14;Si;Silicon;Kremík;28.085;1.90
+15;P ;Phosphorus;Fosfor;30.974;2.19
+16;S ;Sulfur;Sira;32.06;2.58
+17;Cl;Chlorine;Chlor;35.45;3.16
+18;Ar;Argon;Argon;39.948;N/A
+19;K ;Potassium;Kalium;39.098;0.82
+20;Ca;Calcium;Vapnik;40.078;1.00
+21;Sc;Scandium;Skandium;44.956;1.36
+22;Ti;Titanium;Titan;47.867;1.54
+23;V ;Vanadium;Vanad;50.942;1.63
+24;Cr;Chromium;Chromium;51.996;1.66
+25;Mn;Manganese;Mangan;54.938;1.55
+26;Fe;Iron;Zelezo;55.845;1.83
+27;Co;Cobalt;Kobalt;58.933;1.88
+28;Ni;Nickel;Nikl;58.693;1.91
+29;Cu;Copper;Med;63.546;1.90
+30;Zn;Zinc;Zinek;65.38;1.65
+31;Ga;Gallium;Galium;69.723;1.81
+32;Ge;Germanium;Germanium;72.63;2.01
+33;As;Arsenic;Arsen;74.922;2.18
+34;Se;Selenium;Selen;78.971;2.55
+35;Br;Bromine;Brom;79.904;2.96
+36;Kr;Krypton;Krypton;83.798;N/A
+37;Rb;Rubidium;Rubidium;85.468;0.82
+38;Sr;Strontium;Stroncium;87.62;0.95
+39;Y ;Yttrium;Yttrium;88.906;1.22
+40;Zr;Zirconium;Zirkonium;91.224;1.33
+41;Nb;Niobium;Niobium;92.906;1.6
+42;Mo;Molybdenum;Molybden;95.95;2.16
+43;Tc;Technetium;Technecium;[98];1.9
+44;Ru;Ruthenium;Ruthenium;101.07;2.2
+45;Rh;Rhodium;Rhodium;102.91;2.28
+46;Pd;Palladium;Palladium;106.42;2.20
+47;Ag;Silver;Stribro;107.87;1.93
+48;Cd;Cadmium;Kadmium;112.41;1.69
+49;In;Indium;Indium;114.82;1.78
+50;Sn;Tin;Cin;118.71;1.96
+51;Sb;Antimony;Antimon;121.76;2.05
+52;Te;Tellurium;Tellur;127.6;2.1
+53;I ;Iodine;Jod;126.90;2.66
+54;Xe;Xenon;Xenon;131.29;N/A
+55;Cs;Cesium;Cesium;132.91;0.79
+56;Ba;Barium;Barium;137.33;0.89
+57;La;Lanthanum;Lantan;138.91;1.1
+58;Ce;Cerium;Cer;140.12;1.12
+59;Pr;Praseodymium;Praseodym;140.91;1.13
+60;Nd;Neodymium;Neodym;144.24;1.14
+61;Pm;Promethium;Promethium;[145];1.13
+62;Sm;Samarium;Samarium;150.36;1.17
+63;Eu;Europium;Europium;151.96;1.2
+64;Gd;Gadolinium;Gadolinium;157.25;1.20
+65;Tb;Terbium;Terbium;158.93;1.2
+66;Dy;Dysprosium;Dysprosium;162.50;1.22
+67;Ho;Holmium;Holmium;164.93;1.23
+68;Er;Erbium;Erbium;167.26;1.24
+69;Tm;Thulium;Thulium;168.93;1.25
+70;Yb;Ytterbium;Ytterbium;173.05;1.1
+71;Lu;Lutetium;Lutetium;174.97;1.27
+72;Hf;Hafnium;Hafnium;178.49;1.3
+73;Ta;Tantalum;Tantal;180.95;1.5
+74;W ;Tungsten;Wolfram;183.84;2.36
+75;Re;Rhenium;Rhenium;186.21;1.9
+76;Os;Osmium;Osmium;190.23;2.2
+77;Ir;Iridium;Iridium;192.22;2.2
+78;Pt;Platinum;Platina;195.08;2.28
+79;Au;Gold;Zlato;196.97;2.54
+80;Hg;Mercury;Rtut;200.59;2.00
+81;Tl;Thallium;Thallium;204.38;1.62
+82;Pb;Lead;Olovo;207.2;1.87
+83;Bi;Bismuth;Bizmut;208.98;2.02
+84;Po;Polonium;Polonium;[209];2.0
+85;At;Astatine;Astatin;[210];2.2
+86;Rn;Radon;Radon;[222];N/A
+87;Fr;Francium;Francium;[223];0.7
+88;Ra;Radium;Radium;[226];0.9
+89;Ac;Actinium;Aktinium;[227];1.1
+90;Th;Thorium;Thorium;232.04;1.3
+91;Pa;Protactinium;Protaktinium;231.04;1.5
+92;U ;Uranium;Uran;238.03;1.38
+93;Np;Neptunium;Neptunium;[237];1.36
+94;Pu;Plutonium;Plutonium;[244];1.28
+95;Am;Americium;Americium;[243];1.3
+96;Cm;Curium;Curium;[247];1.3
+97;Bk;Berkelium;Berkelium;[247];1.3
+98;Cf;Californium;Kalifornium;[251];1.3
+99;Es;Einsteinium;Einsteinium;[252];1.3
+100;Fm;Fermium;Fermium;[257];1.3
+101;Md;Mendelevium;Mendelevium;[258];1.3
+102;No;Nobelium;Nobelium;[259];1.3
+103;Lr;Lawrencium;Lawrencium;[266];1.3
+104;Rf;Rutherfordium;Rutherfordium;[267];1.3
+105;Db;Dubnium;Dubnium;[268];1.3
+106;Sg;Seaborgium;Seaborgium;[269];1.3
+107;Bh;Bohrium;Bohrium;[270];1.3
+108;Hs;Hassium;Hassium;[269];1.3
+109;Mt;Meitnerium;Meitnerium;[278];1.3
+110;Ds;Darmstadtium;Darmstadtium;[281];1.3
+111;Rg;Roentgenium;Roentgenium;[282];1.3
+112;Cn;Copernicium;Copernicium;[285];1.3
+113;Nh;Nihonium;Nihonium;[286];1.3
+114;Fl;Flerovium;Flerovium;[289];1.3
+115;Mc;Moscovium;Moscovium;[290];1.3
+116;Lv;Livermorium;Livermorium;[293];1.3
+117;Ts;Tennessine;Tennessin;[294];1.3
+118;Og;Oganesson;Oganesson;[294];1.3

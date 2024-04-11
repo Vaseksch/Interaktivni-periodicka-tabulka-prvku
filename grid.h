@@ -1,35 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "movement.h"
+#include "table.h"
 #ifndef GRID_H_   
 #define GRID_H_
 #define column 12
 #define row 19
 
-
-int grid[column][row] = {
-    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-    {0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 2},
-    {0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 1, 2},
-    {0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 1, 1, 1, 1, 1, 2},
-    {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2},
-    {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2},
-    {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2},
-    {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2},
-    {0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5},
-    {0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2},
-    {0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2},
-    {0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5},
-
-};
-
-
-
-
 void drawBoard(){
     for(int col = 0; col < column; col++){
         for(int rowTop = 0; rowTop < row; rowTop++){
-            switch (grid[col][rowTop])
+            //pro nacteni vlastnosti boxu vymaskuji prvni 3 bity
+            switch (grid[col][rowTop] & 0x7)
             {
             case 0:
                 printf("     ");
@@ -49,11 +31,14 @@ void drawBoard(){
             case 5:
                 printf("+----+");
                 break;
+            case 6:
+                printf("----");
+                break;
             }
         }
         printf("\n");
         for(int rowWall = 0; rowWall < row; rowWall++){
-            switch (grid[col][rowWall])
+            switch (grid[col][rowWall] & 0x7)  //pro nacteni vlastnosti boxu vymaskuji prvni 3 bity
             {
             case 0:
                 printf("     ");
@@ -72,6 +57,9 @@ void drawBoard(){
                 break;
             case 5:
                 printf("     ");
+                break;
+            case 6:
+                printf("    ");
                 break;
             }
         }
