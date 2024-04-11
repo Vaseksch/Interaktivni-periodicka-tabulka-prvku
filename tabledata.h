@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#ifndef TABLE_H_   
-#define TABLE_H_
+#ifndef TABLEDATA_H_   
+#define TABLEDATA_H_
 #define column 12
 #define row 19
 

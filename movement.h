@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
-#include "table.h"
+#include "tabledata.h"
+#include "fileread.h"
 #ifndef MOVEMENT_H_   
 #define MOVEMENT_H_
 
@@ -9,9 +10,6 @@
 #define lowerBound 20
 #define leftBound 7
 #define rightBound 47
-
-
-
 
 struct position{
     int XX;
@@ -70,12 +68,14 @@ int moveCursor()
     return 0;
 }
 
-void updateCursorPosition(int input){
+void updateCursorPosition(FILE * fprt, int input){
   moveCursor();
-  printf("\033[0mXX\033[0m");
+  printf("\033[0m%s\033[0m", inputFileStructure.shortcut);
   cursorCordsUpdate(input);
+  int search = grid[curentPosition.col][curentPosition.line] >> 3;
   moveCursor();
-  printf("\033[47;30mXX\033[0m");
+  readElement(fprt, search);
+  printf("\033[47;30m%s\033[0m", inputFileStructure.shortcut);
 }
 
 #endif

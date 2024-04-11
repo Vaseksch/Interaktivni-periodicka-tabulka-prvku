@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "movement.h"
-#include "table.h"
+#include "tabledata.h"
+#include "fileread.h"
 #ifndef GRID_H_   
 #define GRID_H_
 #define column 12
 #define row 19
 
-void drawBoard(){
+void drawBoard(FILE * fptr){
     for(int col = 0; col < column; col++){
         for(int rowTop = 0; rowTop < row; rowTop++){
             //pro nacteni vlastnosti boxu vymaskuji prvni 3 bity
@@ -38,16 +39,19 @@ void drawBoard(){
         }
         printf("\n");
         for(int rowWall = 0; rowWall < row; rowWall++){
+            char * tableData;
             switch (grid[col][rowWall] & 0x7)  //pro nacteni vlastnosti boxu vymaskuji prvni 3 bity
             {
             case 0:
                 printf("     ");
                 break;
             case 1:
-                printf("| XX ");
+            tableFill(fptr);
+                printf("| %s ", inputFileStructure.shortcut);
                 break;
             case 2:
-                printf("| XX |");
+            tableFill(fptr);
+                printf("| %s |", inputFileStructure.shortcut);
                 break;
             case 3:
                 printf("    ");
