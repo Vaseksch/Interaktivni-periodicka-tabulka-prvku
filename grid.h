@@ -39,18 +39,17 @@ void drawBoard(FILE * fptr){
         }
         printf("\n");
         for(int rowWall = 0; rowWall < row; rowWall++){
-            char * tableData;
             switch (grid[col][rowWall] & 0x7)  //pro nacteni vlastnosti boxu vymaskuji prvni 3 bity
             {
             case 0:
                 printf("     ");
                 break;
             case 1:
-            tableFill(fptr);
+            readElement(fptr, grid[col][rowWall] >> 3);
                 printf("| %s ", inputFileStructure.shortcut);
                 break;
             case 2:
-            tableFill(fptr);
+            readElement(fptr, grid[col][rowWall] >> 3);
                 printf("| %s |", inputFileStructure.shortcut);
                 break;
             case 3:

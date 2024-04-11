@@ -58,24 +58,40 @@ void cursorCordsUpdate(int input){
   }
 }
 
-int moveCursor()
+int moveCursor(int XX, int YY)
 {
     COORD poscur;
-    poscur.X = curentPosition.XX;
-    poscur.Y = curentPosition.YY;
+    poscur.X = XX;
+    poscur.Y = YY;
 
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), poscur);
     return 0;
 }
 
 void updateCursorPosition(FILE * fprt, int input){
-  moveCursor();
+  moveCursor(curentPosition.XX, curentPosition.YY);
   printf("\033[0m%s\033[0m", inputFileStructure.shortcut);
   cursorCordsUpdate(input);
   int search = grid[curentPosition.col][curentPosition.line] >> 3;
-  moveCursor();
+  moveCursor(curentPosition.XX, curentPosition.YY);
   readElement(fprt, search);
   printf("\033[47;30m%s\033[0m", inputFileStructure.shortcut);
+}
+
+void printData(){
+  moveCursor(19, 2);
+  clearLine();
+  moveCursor(19, 2);
+  printf("Znacka: %s", inputFileStructure.shortcut);
+  moveCursor(19, 3);
+  clearLine();
+  moveCursor(19, 3);
+  printf("Cesky nazev: %s", inputFileStructure.czName);
+  moveCursor(19, 4);
+  clearLine();
+  moveCursor(19, 4);
+  printf("Latinsky nazev: %s", inputFileStructure.laName);
+  moveCursor(curentPosition.XX, curentPosition.YY);
 }
 
 #endif

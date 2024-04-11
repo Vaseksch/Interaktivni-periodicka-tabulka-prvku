@@ -15,8 +15,9 @@ int main(){
     printf("\033[?25l");
     while (inpt != -1)
     {
+        printData();
         inpt = keyDown(); 
-        updateCursorPosition(fptr ,inpt);
+        updateCursorPosition(fptr ,inpt);   
     }
     fclose(fptr);
     return 0;
