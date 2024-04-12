@@ -8,6 +8,7 @@
 int getch(void);
 
 int main(){
+    SetConsoleTitle("Periodicka tabulka prvku");
     FILE * fptr = fopen("data/data.csv", "r");
     int inpt = 0;
     drawBoard(fptr);
