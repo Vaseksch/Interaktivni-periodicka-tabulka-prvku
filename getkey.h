@@ -31,7 +31,7 @@ switch (inpt) {
       break;
     case 27: //esc
     puts("\a");
-      if(MessageBoxW(GetConsoleWindow(),L"opravdu chcete program ukončit",L"konec",MB_YESNO | MB_ICONQUESTION | MB_APPLMODAL) == 6){
+      if(MessageBoxW(GetConsoleWindow(),L"opravdu chcete program ukončit",L"konec",MB_YESNO | MB_ICONQUESTION | MB_APPLMODAL | MB_DEFBUTTON2) == 6){
         output = -1;
       }else{
         output = 0;

@@ -3,7 +3,7 @@
 #include <windows.h>
 #include "tabledata.h"
 #include "fileread.h"
-#ifndef MOVEMENT_H_   
+#ifndef MOVEMENT_H_
 #define MOVEMENT_H_
 
 #define upperBound 3
@@ -11,64 +11,91 @@
 #define leftBound 7
 #define rightBound 47
 
-struct position{
-    int XX;
-    int YY;
-    int line;
-    int col;
+struct position
+{
+  int XX;
+  int YY;
+  int line;
+  int col;
 };
 
 struct position curentPosition;
 
-void alignCursor(){
-    curentPosition.XX = 6;
-    curentPosition.YY = 3;
-    curentPosition.line = 1;
-    curentPosition.col = 1;
+void alignCursor()
+{
+  curentPosition.XX = 6;
+  curentPosition.YY = 3;
+  curentPosition.line = 1;
+  curentPosition.col = 1;
 }
 
-void cursorCordsUpdate(int input){
-  //pro nacteni vlastnosti boxu se vzdy vymaskuji prvni 3 bity
+void cursorCordsUpdate(int input)
+{
+  int foundNearest = 0;
+  // pro nacteni vlastnosti boxu se vzdy vymaskuji prvni 3 bity
   switch (input)
+  {
+  case 3:
+  //loop oedcita vzdalenost do konce pole
+    for (int distance = 1; distance < curentPosition.col && foundNearest == 0; distance++)
     {
-    case 3:
-    if((grid[curentPosition.col - 1][curentPosition.line] & 7)== 1 || (grid[curentPosition.col - 1][curentPosition.line] & 7) == 2){
-      curentPosition.YY -= 2;
-      curentPosition.col--;
-    }
-      break;
-    case 4:
-    if((grid[curentPosition.col + 1][curentPosition.line] & 7) == 1 || (grid[curentPosition.col + 1][curentPosition.line] & 7) == 2){
-      curentPosition.YY += 2;
-      curentPosition.col++;
-    }
-      break;
-    case 5:
-    if((grid[curentPosition.col][curentPosition.line - 1] & 7) == 1 || (grid[curentPosition.col][curentPosition.line - 1] & 7) == 2){
-      curentPosition.XX -= 5;
-      curentPosition.line--;
+      //hledani nejblizsi obsaditelne bunky
+      if ((grid[curentPosition.col - distance][curentPosition.line] & 7) == 1 || (grid[curentPosition.col - distance][curentPosition.line] & 7) == 2)
+      {
+        curentPosition.YY -= 2 * distance;
+        curentPosition.col -= distance;
+        foundNearest = 1;
+      }
     }
     break;
-    case 6:
-    if((grid[curentPosition.col][curentPosition.line + 1] & 7) == 1 || (grid[curentPosition.col][curentPosition.line + 1] & 7) == 2){
-      curentPosition.XX += 5;
-      curentPosition.line++;
+  case 4:
+    for (int distance = 1; distance < (column - curentPosition.col) && foundNearest == 0; distance++)
+    {
+      if ((grid[curentPosition.col + distance][curentPosition.line] & 7) == 1 || (grid[curentPosition.col + distance][curentPosition.line] & 7) == 2)
+      {
+        curentPosition.YY += 2 * distance;
+        curentPosition.col += distance;
+        foundNearest = 1;
+      }
     }
-      break;     
+    break;
+  case 5:
+    for (int distance = 1; distance < curentPosition.line && foundNearest == 0; distance++)
+    {
+      if ((grid[curentPosition.col][curentPosition.line - distance] & 7) == 1 || (grid[curentPosition.col][curentPosition.line - distance] & 7) == 2)
+      {
+        curentPosition.XX -= 5 * distance;
+        curentPosition.line -= distance;
+        foundNearest = 1;
+      }
+    }
+    break;
+  case 6:
+    for (int distance = 1; distance < (row - curentPosition.line) && foundNearest == 0; distance++)
+    {
+      if ((grid[curentPosition.col][curentPosition.line + distance] & 7) == 1 || (grid[curentPosition.col][curentPosition.line + distance] & 7) == 2)
+      {
+        curentPosition.XX += 5 * distance;
+        curentPosition.line += distance;
+        foundNearest = 1;
+      }
+    }
+    break;
   }
 }
 
 int moveCursor(int XX, int YY)
 {
-    COORD poscur;
-    poscur.X = XX;
-    poscur.Y = YY;
+  COORD poscur;
+  poscur.X = XX;
+  poscur.Y = YY;
 
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), poscur);
-    return 0;
+  SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), poscur);
+  return 0;
 }
 
-void updateCursorPosition(FILE * fprt, int input){
+void updateCursorPosition(FILE *fprt, int input)
+{
   moveCursor(curentPosition.XX, curentPosition.YY);
   printf("\033[0m %s \033[0m", inputFileStructure.shortcut);
   cursorCordsUpdate(input);
@@ -78,7 +105,8 @@ void updateCursorPosition(FILE * fprt, int input){
   printf("\033[47;30m %s \033[0m", inputFileStructure.shortcut);
 }
 
-void printData(){
+void printData()
+{
   moveCursor(19, 2);
   clearLine();
   moveCursor(19, 2);
