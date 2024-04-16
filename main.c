@@ -18,7 +18,7 @@ int main(){
     {
         printData();
         inpt = keyDown(); 
-        updateCursorPosition(fptr ,inpt);   
+        updateCursorPosition(fptr ,inpt); 
     }
     fclose(fptr);
     return 0;

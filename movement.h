@@ -21,7 +21,7 @@ struct position{
 struct position curentPosition;
 
 void alignCursor(){
-    curentPosition.XX = 7;
+    curentPosition.XX = 6;
     curentPosition.YY = 3;
     curentPosition.line = 1;
     curentPosition.col = 1;
@@ -70,12 +70,12 @@ int moveCursor(int XX, int YY)
 
 void updateCursorPosition(FILE * fprt, int input){
   moveCursor(curentPosition.XX, curentPosition.YY);
-  printf("\033[0m%s\033[0m", inputFileStructure.shortcut);
+  printf("\033[0m %s \033[0m", inputFileStructure.shortcut);
   cursorCordsUpdate(input);
   int search = grid[curentPosition.col][curentPosition.line] >> 3;
   moveCursor(curentPosition.XX, curentPosition.YY);
   readElement(fprt, search);
-  printf("\033[47;30m%s\033[0m", inputFileStructure.shortcut);
+  printf("\033[47;30m %s \033[0m", inputFileStructure.shortcut);
 }
 
 void printData(){
