@@ -6,11 +6,6 @@
 #ifndef MOVEMENT_H_
 #define MOVEMENT_H_
 
-#define upperBound 3
-#define lowerBound 20
-#define leftBound 7
-#define rightBound 47
-
 struct position
 {
   int XX;
@@ -23,10 +18,10 @@ struct position curentPosition;
 
 void alignCursor()
 {
-  curentPosition.XX = 6;
-  curentPosition.YY = 3;
-  curentPosition.line = 1;
-  curentPosition.col = 1;
+  curentPosition.XX = 11;
+  curentPosition.YY = 5;
+  curentPosition.line = 2;
+  curentPosition.col = 2;
 }
 
 void cursorCordsUpdate(int input)
@@ -105,6 +100,7 @@ void updateCursorPosition(FILE *fprt, int input)
   printf("\033[47;30m %s \033[0m", inputFileStructure.shortcut);
 }
 
+/*
 void printData()
 {
   moveCursor(19, 2);
@@ -120,6 +116,6 @@ void printData()
   moveCursor(19, 4);
   printf("Latinsky nazev: %s", inputFileStructure.laName);
   moveCursor(curentPosition.XX, curentPosition.YY);
-}
+}*/
 
 #endif
