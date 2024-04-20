@@ -14,7 +14,7 @@ int main(){
     FILE * fptr = fopen("data/data.csv", "r");
     int inpt = 0;
     drawBoard(fptr);
-    printLabels();
+    printStaticLabels();
     updateCursorPosition(fptr ,inpt);
     printf("\033[?25l");
     while (inpt != -1)
