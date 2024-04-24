@@ -7,7 +7,6 @@ This program is designed for educational purposes, particularly in the fields of
 Features:
 
 Navigate the periodic table using arrow keys or WASD keys.
-
 Switch between different table modes using R or F1 - F3 keys.
 
 Technical Details:
