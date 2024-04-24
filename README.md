@@ -9,21 +9,7 @@ Features:
 Navigate the periodic table using arrow keys or WASD keys.
 Switch between different table modes using R or F1 - F3 keys.
 
-Technical Details:
-
-The project is organized into header files for modularity.
-The periodic table is rendered in one of the header files using ASCII characters (+ and -).
-The table displays the element symbol.
-Hovering over a box highlights it and displays basic information about the element (symbol, atomic number, Czech name, English name, relative atomic mass, electronegativity, etc.).
-Element information is loaded from a CSV file into a custom structure.
-A separate header file handles file loading.
-Each line in the CSV file contains information about a single element.
-Information is read as a string and parsed into tokens using the strtok function.
-Tokens are then stored in the aforementioned structure.
-Additional header files contain functions for handling keyboard input and table navigation.
-Element data is stored in a two-dimensional array.
-The first 3 bits in the array define the rendering behavior of a box.
-The remaining 7 bits store the element's atomic number, used for retrieving information from the structure.
+![Snímek obrazovky (305)](https://github.com/Vaseksch/IT-A2b-zaverecka/assets/128920238/0a611c7d-ab60-4101-b76d-ed248e6c8b1c)
 
 Notes:
 
