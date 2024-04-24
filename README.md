@@ -7,8 +7,7 @@ This program is designed for educational purposes, particularly in the fields of
 Features:
 
 Navigate the periodic table using arrow keys or WASD keys.
-View detailed information about a chosen element by pressing Enter.
-Return to the table by pressing Backspace.
+Switch between different table modes using R or F1 - F3 keys
 Technical Details:
 
 The project is organized into header files for modularity.
