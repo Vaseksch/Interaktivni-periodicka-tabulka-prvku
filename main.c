@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
-#include "tabledraw.h"
-#include "getkey.h"
-#include "movement.h"
-#include "fileread.h"
-#include "displaytext.h"
+#include "headers/movement.h"
+#include "headers/tabledata.h"
+#include "headers/tabledraw.h"
+#include "headers/getkey.h"
+#include "headers/displaytext.h"
+
 
 int getch(void);
 

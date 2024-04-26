@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
-#include "getkey.h"
+#include "headers/getkey.h"
 
 int getch(void);
 

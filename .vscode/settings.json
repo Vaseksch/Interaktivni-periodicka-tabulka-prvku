@@ -1,6 +1,11 @@
 {
     "files.associations": {
         "fileread.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "tabledata.h": "c",
+        "displaytext.h": "c",
+        "movement.h": "c",
+        "getkey.h": "c",
+        "tabledraw.h": "c"
     }
 }

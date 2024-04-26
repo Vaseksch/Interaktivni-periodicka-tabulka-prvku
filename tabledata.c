@@ -1,9 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#ifndef TABLEDATA_H_   
-#define TABLEDATA_H_
-#define column 13
-#define row 20
+#include "headers/tableData.h"
+
+int tableMode = 0;
 
 // v kazdem slotu jsou ulozeny 2 parametry: 1) vlastnost boxu prvni 3 bity. 2) cislo prvku nasledujicich 7 bitu = cislo prvku.
 int grid[column][row] = {
@@ -22,5 +19,3 @@ int grid[column][row] = {
     {0x0, 0x0, 0x0, 0x0, 0x0, 0x4, 0x4, 0x4, 0x4, 0x4, 0x4, 0x4, 0x4, 0x4, 0x4, 0x4, 0x4, 0x4, 0x4, 0x5},
 
 };
-
-#endif

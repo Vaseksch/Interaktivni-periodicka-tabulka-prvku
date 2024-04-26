@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "fileread.h"
 #include "movement.h"
 #include <wchar.h>
 #include <string.h>

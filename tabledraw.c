@@ -1,11 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "movement.h"
-#include "fileread.h"
-#include "tabledata.h"
-#ifndef TABLEDRAW_H_   
-#define TABLEDRAW_H_
+#include "headers/fileread.h"
+#include "headers/tabledata.h"
+#include "headers/movement.h"
 
+void printElementInMode(){
+    switch (tableMode)
+    {
+    case 0:
+        /* code */
+        break;
+    }
+}
 
 void drawBoard(FILE * fptr){
     for(int col = 0; col < column; col++){
@@ -69,5 +75,3 @@ void drawBoard(FILE * fptr){
         alignCursor();
     }
 }
-
-#endif

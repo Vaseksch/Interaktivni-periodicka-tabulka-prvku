@@ -12,6 +12,6 @@ struct fileInputData{
 
 struct fileInputData inputFileStructure;
 
-int readElement(FILE * fptr, int number);
+int readElement(FILE *fptr, int number);
 
 #endif
