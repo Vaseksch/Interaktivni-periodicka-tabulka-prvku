@@ -19,6 +19,12 @@ int readElement(FILE * fptr, int number){
             strcpy(inputFileStructure.czName, elementNameCz);
             char * elementAr = strtok(NULL, ";");       
             inputFileStructure.Ar = atof(elementAr);
+            char * elementElectronegativity = strtok(NULL, ";");       
+            inputFileStructure.electronegativity = atof(elementElectronegativity);            
+            char * elementGroup = strtok(NULL, ";");       
+            inputFileStructure.Group = atoi(elementGroup);
+            char * elementState = strtok(NULL, ";");       
+            inputFileStructure.StandardState = atoi(elementState);
             return 0;
         }else{
             line++;

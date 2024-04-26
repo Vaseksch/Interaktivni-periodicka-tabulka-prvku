@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <windows.h>
 #include "headers/getkey.h"
+#include "headers/tabledata.h"
 
 int getch(void);
 
@@ -17,6 +18,20 @@ switch (inpt) {
     case 8: //backspace
       output = 2;
       break;
+    case 73: //PG_UP - previous table mode
+      if(tableMode > 1){
+        tableMode--;
+      }else{
+        tableMode = 3;
+      }
+      break;
+    case 81: //PG_DN - next table mode
+      if(tableMode < 3){
+        tableMode++;
+      }else{
+        tableMode = 1;
+      }
+      break;                 
     case 72: //up
       output = 3;
       break;
@@ -25,7 +40,7 @@ switch (inpt) {
       break;
     case 75: //left
       output = 5;
-      break;
+      break;  
     case 77: //right
       output = 6;
       break;

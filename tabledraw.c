@@ -4,19 +4,14 @@
 #include "headers/tabledata.h"
 #include "headers/movement.h"
 
-void printElementInMode(){
-    switch (tableMode)
-    {
-    case 0:
-        /* code */
-        break;
-    }
-}
 
-void drawBoard(FILE * fptr){
-    for(int col = 0; col < column; col++){
-        for(int rowTop = 0; rowTop < row; rowTop++){
-            //pro nacteni vlastnosti boxu vymaskuji prvni 3 bity
+void drawBoard(FILE *fptr)
+{
+    for (int col = 0; col < column; col++)
+    {
+        for (int rowTop = 0; rowTop < row; rowTop++)
+        {
+            // pro nacteni vlastnosti boxu vymaskuji prvni 3 bity
             switch (grid[col][rowTop] & 0x7)
             {
             case 0:
@@ -43,18 +38,19 @@ void drawBoard(FILE * fptr){
             }
         }
         printf("\n");
-        for(int rowWall = 0; rowWall < row; rowWall++){
-            switch (grid[col][rowWall] & 0x7)  //pro nacteni vlastnosti boxu vymaskuji prvni 3 bity
+        for (int rowWall = 0; rowWall < row; rowWall++)
+        {
+            switch (grid[col][rowWall] & 0x7) // pro nacteni vlastnosti boxu vymaskuji prvni 3 bity
             {
             case 0:
                 printf("     ");
                 break;
             case 1:
-            readElement(fptr, grid[col][rowWall] >> 3);
+                readElement(fptr, grid[col][rowWall] >> 3);
                 printf("| %s ", inputFileStructure.shortcut);
                 break;
             case 2:
-            readElement(fptr, grid[col][rowWall] >> 3);
+                readElement(fptr, grid[col][rowWall] >> 3);
                 printf("| %s |", inputFileStructure.shortcut);
                 break;
             case 3:

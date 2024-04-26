@@ -8,6 +8,8 @@ struct fileInputData{
     char czName[20];
     float Ar;
     float electronegativity;
+    int Group;
+    int StandardState;
 };
 
 struct fileInputData inputFileStructure;

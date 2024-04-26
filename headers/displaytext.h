@@ -28,6 +28,15 @@ void printLineFloat(int XOrigin, int YOrigin, float * floatInput){
     printf("%.3f", *floatInput);
 }
 
+void printLineNum(int XOrigin, int YOrigin, int * numInput){
+    moveCursor(XOrigin, YOrigin);
+    for(int spaceCount = 0; spaceCount < maxOutputLenght; spaceCount++){
+        printf(" ");
+    }
+    moveCursor(XOrigin, YOrigin);
+    printf("%d", *numInput);
+}
+
 void printStaticLabels(){
     //column and line numbers
     for(int columnNumbers = 1; columnNumbers <= 18; columnNumbers++){
@@ -81,6 +90,7 @@ void updateOutput(){
     printLineString(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, inputFileStructure.czName);
     printLineString(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, inputFileStructure.laName);
     printLineFloat(staticLabelPosX + dataOutputOffset, staticLabelPosY + 4, &inputFileStructure.Ar);
+    //printLineNum(staticLabelPosX + dataOutputOffset, staticLabelPosY + 5, &tableMode);
 }
 
 #endif

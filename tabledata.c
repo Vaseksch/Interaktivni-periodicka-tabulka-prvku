@@ -1,6 +1,6 @@
 #include "headers/tableData.h"
 
-int tableMode = 0;
+int tableMode = 2;
 
 // v kazdem slotu jsou ulozeny 2 parametry: 1) vlastnost boxu prvni 3 bity. 2) cislo prvku nasledujicich 7 bitu = cislo prvku.
 int grid[column][row] = {
