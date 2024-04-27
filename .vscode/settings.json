@@ -6,6 +6,8 @@
         "displaytext.h": "c",
         "movement.h": "c",
         "getkey.h": "c",
-        "tabledraw.h": "c"
+        "tabledraw.h": "c",
+        "tablemodes.h": "c",
+        "stdio.h": "c"
     }
 }
