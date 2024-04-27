@@ -1,16 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 
-int getch(void);
+
+void fce(char * format, ...){
+
+    va_list args;
+    va_start(args, format);
+    vprintf(format, args);
+    va_end(args);
+}
+
 
 int main(){
-    int inpt = 0;
-   while(inpt != -1){
-    inpt = getch();
-    if(inpt == 27){
-        inpt = -1;
-    }
-    printf("%d\n", inpt);
-   }
+    char name[] = "karel";
+    fce("%.3f\n", 1.245);
+    fce("%s\n", name);
+    fce("%d\n", 3);
+
     return 0;
 }

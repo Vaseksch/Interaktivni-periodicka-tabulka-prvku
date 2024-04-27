@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdarg.h>
 #include "headers/fileread.h"
 #include "headers/movement.h"
 #include "headers/displaytext.h"
 #include "headers/tabledata.h"
 
-
+//function clears previous output
 void clearPreviousOutput(int XOrigin, int YOrigin)
 {
     moveCursor(XOrigin, YOrigin);
@@ -16,22 +17,14 @@ void clearPreviousOutput(int XOrigin, int YOrigin)
     moveCursor(XOrigin, YOrigin);
 }
 
-void printLineString(int XOrigin, int YOrigin, char *lineInput)
+//universal function to print data in required position
+void printLine(int XOrigin, int YOrigin, char *format, ...)
 {
     clearPreviousOutput(XOrigin, YOrigin);
-    printf("%s", lineInput);
-}
-
-void printLineFloat(int XOrigin, int YOrigin, float *floatInput)
-{
-    clearPreviousOutput(XOrigin, YOrigin);
-    printf("%.3f", *floatInput);
-}
-
-void printLineNum(int XOrigin, int YOrigin, int *numInput)
-{
-    clearPreviousOutput(XOrigin, YOrigin);
-    printf("%d", *numInput);
+    va_list args;
+    va_start(args, format);
+    vprintf(format, args);
+    va_end(args);
 }
 
 void printStaticLabels()
@@ -117,30 +110,30 @@ void getMode()
 void updateOutput()
 {
     getMode();
-    printLineString(staticLabelPosX + dataOutputOffset, staticLabelPosY + 0, inputFileStructure.elementntNumber);
-    printLineString(staticLabelPosX + dataOutputOffset, staticLabelPosY + 1, inputFileStructure.shortcut);
+    printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 0, "%s", inputFileStructure.elementntNumber);
+    printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 1, "%s", inputFileStructure.shortcut);
     switch (tableMode)
     {
     case 1:
-        printLineString(staticLabelPosX, staticLabelPosY + 2, modeBasedOutput1.dataLine0);
-        printLineString(staticLabelPosX, staticLabelPosY + 3, modeBasedOutput1.dataLine1);
-        printLineString(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, inputFileStructure.czName);
-        printLineString(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, inputFileStructure.laName);
-        printLineString(staticLabelPosX + 52, staticLabelPosY + 23, modeBasedOutput1.modeName);
+        printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
+        printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
+        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%s", inputFileStructure.czName);
+        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.laName);
+        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
     case 2:
-        printLineString(staticLabelPosX, staticLabelPosY + 2, modeBasedOutput1.dataLine0);
-        printLineString(staticLabelPosX, staticLabelPosY + 3, modeBasedOutput1.dataLine1);
-        printLineFloat(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, &inputFileStructure.Ar);
-        printLineFloat(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, &inputFileStructure.electronegativity);
-        printLineString(staticLabelPosX + 52, staticLabelPosY + 23, modeBasedOutput1.modeName);
+        printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
+        printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
+        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%.3f", inputFileStructure.Ar);
+        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%.3f", inputFileStructure.electronegativity);
+        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
     case 3:
-        printLineString(staticLabelPosX, staticLabelPosY + 2, modeBasedOutput1.dataLine0);
-        printLineString(staticLabelPosX, staticLabelPosY + 3, modeBasedOutput1.dataLine1);
-        printLineNum(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, &inputFileStructure.Group);
-        printLineNum(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, &inputFileStructure.StandardState);
-        printLineString(staticLabelPosX + 52, staticLabelPosY + 23, modeBasedOutput1.modeName);
+        printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
+        printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
+        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%d", inputFileStructure.Group);
+        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%d", inputFileStructure.StandardState);
+        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
     }
 }
