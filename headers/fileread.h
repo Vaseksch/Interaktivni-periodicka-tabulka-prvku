@@ -8,11 +8,13 @@ struct fileInputData{
     char czName[20];
     float Ar;
     float electronegativity;
-    int Group;
-    int StandardState;
+    char Group[20];
+    char StandardState[20];
 };
 
 struct fileInputData inputFileStructure;
+
+void decodeProperties(char * propertiesinput);
 
 int readElement(FILE *fptr, int number);
 

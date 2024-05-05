@@ -31,6 +31,8 @@ void printStaticLabels();
 
 void getMode();
 
+void printIfvalueIsValid(float value, char format[5], int line);
+
 void updateOutput();
 
 #endif

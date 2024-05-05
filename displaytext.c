@@ -99,14 +99,23 @@ void getMode()
         break;
     case 3:
 
-        strcpy(modeBasedOutput1.dataLine0, "skupiny:    ");
+        strcpy(modeBasedOutput1.dataLine0, "skupina:    ");
         strcpy(modeBasedOutput1.dataLine1, "skupenstvi:       ");
         strcpy(modeBasedOutput1.modeName, "3 - vlastnosti");
         break;
     }
 }
 
-// function prints data of selected element
+//checks if value of element isnt 0, if it is 0 then it prints N/A, int line argument is Y offset from data output anchor position
+void printIfvalueIsValid(float value, char format[5], int line){
+    if(value != 0){
+          printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + line, format, value);  
+        }else{
+          printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + line, "%s", "N/A");
+        }
+}
+
+// function prints data of selected element, int added to staticLabelPosY is Y offset from data output anchor position
 void updateOutput()
 {
     getMode();
@@ -124,15 +133,15 @@ void updateOutput()
     case 2:
         printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
         printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
-        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%.3f", inputFileStructure.Ar);
-        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%.3f", inputFileStructure.electronegativity);
+        printIfvalueIsValid(inputFileStructure.Ar, "%.3f", 2);
+        printIfvalueIsValid(inputFileStructure.electronegativity, "%.3f", 3);
         printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
     case 3:
         printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
         printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
-        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%d", inputFileStructure.Group);
-        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%d", inputFileStructure.StandardState);
+        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%s", inputFileStructure.Group);
+        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.StandardState);
         printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
     }

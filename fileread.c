@@ -3,6 +3,57 @@
 #include <string.h>
 #include"headers/fileread.h"
 
+void decodeProperties(char * propertiesinput){
+    int convertedInput = atoi(propertiesinput);
+
+    switch (convertedInput & 3)
+    {
+    case 1:
+        strcpy(inputFileStructure.StandardState, "pevne");
+        break;
+    case 2:
+        strcpy(inputFileStructure.StandardState, "kapalne");
+        break;
+    case 3:
+        strcpy(inputFileStructure.StandardState, "plynne");
+        break;        
+    }
+
+    switch (convertedInput >> 2)
+    {
+    case 1:
+        strcpy(inputFileStructure.Group, "nekov");
+        break;
+    case 2:
+        strcpy(inputFileStructure.Group, "alkalicky kov");
+        break;
+    case 3:
+        strcpy(inputFileStructure.Group, "kov a. zemin");
+        break;
+    case 4:
+        strcpy(inputFileStructure.Group, "prechodny kov");
+        break;
+    case 5:
+        strcpy(inputFileStructure.Group, "polokov");
+        break;
+    case 6:
+        strcpy(inputFileStructure.Group, "neprechodny kov");
+        break;
+    case 7:
+        strcpy(inputFileStructure.Group, "vzacny plyn");
+        break;
+    case 8:
+        strcpy(inputFileStructure.Group, "lanthanoid");
+        break;
+    case 9:
+        strcpy(inputFileStructure.Group, "aktinoid");
+        break;
+    case 10:
+        strcpy(inputFileStructure.Group, "Halogen");
+        break;              
+    }
+}
+
 int readElement(FILE * fptr, int number){
     char lineInput[64];
     int line = 1;
@@ -21,10 +72,8 @@ int readElement(FILE * fptr, int number){
             inputFileStructure.Ar = atof(elementAr);
             char * elementElectronegativity = strtok(NULL, ";");       
             inputFileStructure.electronegativity = atof(elementElectronegativity);            
-            char * elementGroup = strtok(NULL, ";");       
-            inputFileStructure.Group = atoi(elementGroup);
-            char * elementState = strtok(NULL, ";");       
-            inputFileStructure.StandardState = atoi(elementState);
+            char * elementProperties = strtok(NULL, ";");
+            decodeProperties(elementProperties);       
             return 0;
         }else{
             line++;
