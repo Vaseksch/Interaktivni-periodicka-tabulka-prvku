@@ -63,21 +63,15 @@ void printStaticLabels()
     }
 
     // labels for basic element informations
-    moveCursor(staticLabelPosX, staticLabelPosY);
-    printf("cislo prvku:");
-    moveCursor(staticLabelPosX, staticLabelPosY + 1);
-    printf("zkratka:");
+    printLine(staticLabelPosX, staticLabelPosY, "%s", "cislo prvku:");
+    printLine(staticLabelPosX, staticLabelPosY + 1, "%s", "zkratka:");
     // controls labels
-    moveCursor(5, 25);
-    printf("pohyb: < > ^ v");
-    moveCursor(5, 26);
-    printf("dalsi rezim: PG_DN");
-    moveCursor(5, 27);
-    printf("predchozi rezim: PG_UP");
-    moveCursor(80, 26);
-    printf("rezim:");
-    moveCursor(5, 28);
-    printf("konec: ESC");
+    printLine(5, 25, "%s", "pohyb: < > ^ v");
+    printLine(5, 26, "%s", "dalsi rezim: PG_DN");
+    printLine(5, 27, "%s", "predchozi rezim: PG_UP");
+    printLine(80, 26, "%s", "rezim:");
+    printLine(80, 28, "%s", "Aktualni ke dni 4.5.2022 podle IUPAC");
+    printLine(5, 28, "%s", "konec: ESC");
     // reset cursor to previous position
     moveCursor(curentPosition.XX, curentPosition.YY);
 }
