@@ -7,12 +7,13 @@ This program is designed for educational purposes, particularly in the fields of
 Controls:
 
 Navigate the periodic table using arrow keys or WASD keys.
-Switch between different table modes using R or F1 - F3 keys.
+Switch between different table modes using PG_UP and PG_DN keys.
 
 
-V1.0
+V1.3
 
-![Snímek obrazovky (305)](https://github.com/Vaseksch/IT-A2b-zaverecka/assets/128920238/0a611c7d-ab60-4101-b76d-ed248e6c8b1c)
+![tabulka](https://github.com/Vaseksch/IT-A2b-zaverecka/assets/128920238/f1e81959-59b0-4800-bc05-0b91c2b341f2)
+
 
 
 
