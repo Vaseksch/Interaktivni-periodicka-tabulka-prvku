@@ -22,11 +22,11 @@ switch (inpt) {
       if(tableMode > 1){
         tableMode--;
       }else{
-        tableMode = 3;
+        tableMode = 5;
       }
       break;
     case 81: //PG_DN - next table mode
-      if(tableMode < 3){
+      if(tableMode < 5){
         tableMode++;
       }else{
         tableMode = 1;

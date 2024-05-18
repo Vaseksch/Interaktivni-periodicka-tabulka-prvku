@@ -8,6 +8,6 @@
 
 void printElementInMode();
 
-void drawBoard(FILE * fptr);
+void drawBoard(FILE * fptr, int resetPosition);
 
 #endif

@@ -16,14 +16,13 @@ void alignCursor()
 void cursorCordsUpdate(int input)
 {
   int foundNearest = 0;
-  // pro nacteni vlastnosti boxu se vzdy vymaskuji prvni 3 bity
+  //box properties are stored in first 3 bits
   switch (input)
   {
   case 3:
-  //loop oedcita vzdalenost do konce pole
     for (int distance = 1; distance < curentPosition.col && foundNearest == 0; distance++)
     {
-      //hledani nejblizsi obsaditelne bunky
+      //looks for next avalible box
       if ((grid[curentPosition.col - distance][curentPosition.line] & 7) == 1 || (grid[curentPosition.col - distance][curentPosition.line] & 7) == 2)
       {
         curentPosition.YY -= 2 * distance;

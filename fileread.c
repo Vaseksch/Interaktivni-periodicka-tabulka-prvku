@@ -55,7 +55,7 @@ void decodeProperties(char * propertiesinput){
 }
 
 int readElement(FILE * fptr, int number){
-    char lineInput[64];
+    char lineInput[128];
     int line = 1;
     fseek(fptr, 0, SEEK_SET);
     while(fgets(lineInput, sizeof(lineInput)/sizeof(char), fptr)){
@@ -73,7 +73,15 @@ int readElement(FILE * fptr, int number){
             char * elementElectronegativity = strtok(NULL, ";");       
             inputFileStructure.electronegativity = atof(elementElectronegativity);            
             char * elementProperties = strtok(NULL, ";");
-            decodeProperties(elementProperties);       
+            decodeProperties(elementProperties);
+            char * elementDiscoverer = strtok(NULL, ";");        
+            strcpy(inputFileStructure.discoverer, elementDiscoverer);
+            char * elementYear = strtok(NULL, ";");        
+            strcpy(inputFileStructure.discoveryYear, elementYear);
+            char * elementBoil = strtok(NULL, ";");       
+            inputFileStructure.boilingPoint = atof(elementBoil);
+            char * elementMelt = strtok(NULL, ";");       
+            inputFileStructure.meltingPoint = atof(elementMelt);           
             return 0;
         }else{
             line++;

@@ -8,7 +8,7 @@
 #define maxOutputLenght 15
 #define staticLabelPosX 35
 #define staticLabelPosY 3
-#define dataOutputOffset 20
+#define dataOutputOffset 19
 
 struct modeBasedOutput
 {
@@ -21,17 +21,13 @@ struct modeBasedOutput modeBasedOutput1;
 
 void clearPreviousOutput(int XOrigin, int YOrigin);
 
-void printLineString(int XOrigin, int YOrigin, char *lineInput);
-
-void printLineFloat(int XOrigin, int YOrigin, float *floatInput);
-
-void printLineNum(int XOrigin, int YOrigin, int *numInput);
+void printLine(int XOrigin, int YOrigin, char *format, ...);
 
 void printStaticLabels();
 
 void getMode();
 
-void printIfvalueIsValid(float value, char format[5], int line);
+void printIfvalueIsValid(float value, char format[5], int position_X , int position_Y);
 
 void updateOutput();
 

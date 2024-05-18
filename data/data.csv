@@ -1,118 +1,118 @@
-1;H ;Hydrogenium;Vodik;1.008;2.200;7
-2;He;Helium;Helium;4.003;0.000;31
-3;Li;Lithium;Lithium;6.941;0.980;9
-4;Be;Beryllium;Beryllium;9.012;1.570;13
-5;B ;Borum;Bor;10.811;2.040;21
-6;C ;Carbonium;Uhlik;12.011;2.550;5
-7;N ;Nitrogenium;Dusik;14.007;3.040;7
-8;O ;Oxygenium;Kyslik;15.999;3.440;7
-9;F ;Fluorum;Fluor;18.998;3.980;43
-10;Ne;Neonum;Neon;20.180;0.000;31
-11;Na;Natrium;Sodik;22.990;0.930;9
-12;Mg;Magnesium;Horcik;24.305;1.310;13
-13;Al;Aluminium;Hlinik;26.982;1.610;25
-14;Si;Silicium;Kremik;28.085;1.900;21
-15;P ;Phosphorus;Fosfor;30.974;2.190;5
-16;S ;Sulphur;Sira;32.060;2.580;5
-17;Cl;Chlorum;Chlor;35.450;3.160;43
-18;Ar;Argon;Argon;39.948;0.000;31
-19;K ;Kalium;Draslik;39.098;0.820;9
-20;Ca;Calcium;Vapnik;40.078;1.000;13
-21;Sc;Scandium;Skandium;44.956;1.360;17
-22;Ti;Titanium;Titan;47.867;1.540;17
-23;V ;Vanadium;Vanad;50.942;1.630;17
-24;Cr;Chromium;Chrom;51.996;1.660;17
-25;Mn;Manganum;Mangan;54.938;1.550;17
-26;Fe;Ferrum;Zelezo;55.845;1.830;17
-27;Co;Cobaltum;Kobalt;58.933;1.880;17
-28;Ni;Niccolum;Nikl;58.693;1.910;17
-29;Cu;Cuprum;Med;63.546;1.900;17
-30;Zn;Zincum;Zinek;65.380;1.650;17
-31;Ga;Gallium;Gallium;69.723;1.810;26
-32;Ge;Germanium;Germanium;72.630;2.010;21
-33;As;Arsenicum;Arsen;74.922;2.180;21
-34;Se;Selenium;Selen;78.971;2.550;5
-35;Br;Bromum;Brom;79.904;2.960;42
-36;Kr;Krypton;Krypton;83.798;0.000;31
-37;Rb;Rubidium;Rubidium;85.468;0.820;9
-38;Sr;Strontium;Stroncium;87.620;0.950;13
-39;Y ;Yttrium;Yttrium;88.906;1.220;17
-40;Zr;Zirconium;Zirkonium;91.224;1.330;17
-41;Nb;Niobium;Niob;92.906;1.600;17
-42;Mo;Molybdenum;Molybden;95.950;2.160;17
-43;Tc;Technetium;Technecium;98.000;1.900;17
-44;Ru;Ruthenium;Rutenium;101.070;2.200;17
-45;Rh;Rhodium;Rhodium;102.910;2.280;17
-46;Pd;Palladium;Palladium;106.420;2.200;17
-47;Ag;Argentum;Stribro;107.870;1.930;17
-48;Cd;Cadmium;Kadmium;112.410;1.690;17
-49;In;Indium;Indium;114.820;1.780;25
-50;Sn;Stannum;Cin;118.710;1.960;25
-51;Sb;Stibium;Antimon;121.760;2.050;21
-52;Te;Tellurium;Tellur;127.600;2.100;21
-53;I ;Iodum;Jod;126.900;2.660;41
-54;Xe;Xenon;Xenon;131.290;2.600;31
-55;Cs;Caesium;Cesium;132.910;0.790;10
-56;Ba;Barium;Baryum;137.330;0.890;13
-57;La;Lanthanum;Lantan;138.910;1.100;33
-58;Ce;Cerium;Cer;140.120;1.120;33
-59;Pr;Praseodymium;Praseodym;140.910;1.130;33
-60;Nd;Neodymium;Neodym;144.240;1.140;33
-61;Pm;Promethium;Promethium;145.000;1.130;33
-62;Sm;Samarium;Samarium;150.360;1.170;33
-63;Eu;Europium;Europium;151.960;1.200;33
-64;Gd;Gadolinium;Gadolin;157.250;1.200;33
-65;Tb;Terbium;Terbium;158.930;1.200;33
-66;Dy;Dysprosium;Dysprosium;162.500;1.220;33
-67;Ho;Holmium;Holmium;164.930;1.230;33
-68;Er;Erbium;Erbium;167.260;1.240;33
-69;Tm;Thulium;Thulium;168.930;1.250;33
-70;Yb;Ytterbium;Ytterbium;173.050;1.100;33
-71;Lu;Lutetium;Lutecium;174.970;1.270;33
-72;Hf;Hafnium;Hafnium;178.490;1.300;17
-73;Ta;Tantalum;Tantal;180.950;1.500;17
-74;W ;Wolframium;Wolfram;183.840;2.360;17
-75;Re;Rhenium;Rhenium;186.210;1.900;17
-76;Os;Osmium;Osmium;190.230;2.200;17
-77;Ir;Iridium;Iridium;192.220;2.200;17
-78;Pt;Platinum;Platina;195.080;2.280;17
-79;Au;Aurum;Zlato;196.970;2.540;17
-80;Hg;Hydrargyrum;Rtut;200.590;2.000;18
-81;Tl;Thallium;Talium;204.380;1.620;25
-82;Pb;Plumbum;Olovo;207.200;2.330;25
-83;Bi;Bismuthum;Bismut;208.980;2.020;25
-84;Po;Polonium;Polonium;209.000;2.000;21
-85;At;Astatinum;Astat;210.000;2.200;41
-86;Rn;Radon;Radon;222.000;0.000;31
-87;Fr;Francium;Francium;223.000;0.700;9
-88;Ra;Radium;Radium;226.000;0.900;13
-89;Ac;Actinium;Aktinium;227.000;1.100;37
-90;Th;Thorium;Thorium;232.040;1.300;37
-91;Pa;Protactinium;Protaktinium;231.040;1.500;37
-92;U ;Uranium;Uran;238.030;1.380;37
-93;Np;Neptunium;Neptunium;237.000;1.360;37
-94;Pu;Plutonium;Plutonium;244.000;1.280;37
-95;Am;Americium;Americium;243.000;1.300;37
-96;Cm;Curium;Curium;247.000;1.300;37
-97;Bk;Berkelium;Berkelium;247.000;1.300;37
-98;Cf;Californium;Kalifornium;251.000;1.300;37
-99;Es;Einsteinium;Einsteinium;252.000;1.300;37
-100;Fm;Fermium;Fermium;257.000;1.300;37
-101;Md;Mendelevium;Mendelevium;258.000;1.300;37
-102;No;Nobelium;Nobelium;259.000;1.300;37
-103;Lr;Lawrencium;Lawrencium;262.000;1.300;37
-104;Rf;Rutherfordium;Rutherfordium;267.000;1.300;17
-105;Db;Dubnium;Dubnium;268.000;1.300;17
-106;Sg;Seaborgium;Seaborgium;269.000;1.300;17
-107;Bh;Bohrium;Bohrium;270.000;1.300;17
-108;Hs;Hassium;Hassium;269.000;1.300;17
-109;Mt;Meitnerium;Meitnerium;278.000;1.300;17
-110;Ds;Darmstadtium;Darmstadtium;281.000;1.300;17
-111;Rg;Roentgenium;Roentgenium;282.000;1.300;17
-112;Cn;Copernicium;Copernicium;285.000;1.300;18
-113;Nh;Nihonium;Nihonium;286.000;1.300;25
-114;Fl;Flerovium;Flerovium;289.000;1.300;25
-115;Mc;Moscovium;Moscovium;290.000;1.300;25
-116;Lv;Livermorium;Livermorium;293.000;1.300;25
-117;Ts;Tennessine;Tennessin;294.000;1.300;41
-118;Og;Oganesson;Oganesson;294.000;1.300;31
+1;H ;Hydrogenium;Vodik;1.008;2.200;7;H. Cavendish;1766;-252.87;-259.16
+2;He;Helium;Helium;4.003;0.000;31;P. Janssen;1868;-268.93;-272.20
+3;Li;Lithium;Lithium;6.941;0.980;9;J.A. Arfvedson;1817;1342;180.54
+4;Be;Beryllium;Beryllium;9.012;1.570;13;N.L. Vauquelin;1798;2471;1287
+5;B ;Borum;Bor;10.811;2.040;21;J. Gay-Lussac;1808;4000;2075
+6;C ;Carbonium;Uhlik;12.011;2.550;5;Egypt, Sumer;3750 pr. n. l.;4827;3550
+7;N ;Nitrogenium;Dusik;14.007;3.040;7;D. Rutherford;1772;-195.8;-210.1
+8;O ;Oxygenium;Kyslik;15.999;3.440;7;J. Priestley;1774;-182.96;-218.79
+9;F ;Fluorum;Fluor;18.998;3.980;43;H. Moissan;1886;-188.11;-219.67
+10;Ne;Neonum;Neon;20.180;0.000;31;W. Ramsay;1898;-246.08;-248.59
+11;Na;Natrium;Sodik;22.990;0.930;9;H. Davy;1807;883;97.72
+12;Mg;Magnesium;Horcik;24.305;1.310;13;J. Black;1755;1091;650
+13;Al;Aluminium;Hlinik;26.982;1.610;25;H. Davy;1825;2519;660.32
+14;Si;Silicium;Kremik;28.085;1.900;21;J. Berzelius;1823;2900;1414
+15;P ;Phosphorus;Fosfor;30.974;2.190;5;H. Brand;1669;280;44.15
+16;S ;Sulphur;Sira;32.060;2.580;5;A. Lavoisier;2000 pr. n. l.;444.6;115.21
+17;Cl;Chlorum;Chlor;35.450;3.160;43;C. Scheele;1774;-34.04;-101.5
+18;Ar;Argon;Argon;39.948;0.000;31;L. Rayleigh;1894;-185.85;-189.35
+19;K ;Kalium;Draslik;39.098;0.820;9;H. Davy;1807;759;63.38
+20;Ca;Calcium;Vapnik;40.078;1.000;13;H. Davy;1808;1484;842
+21;Sc;Scandium;Skandium;44.956;1.360;17;L.F. Nilson;1879;2836;1541
+22;Ti;Titanium;Titan;47.867;1.540;17;W. Gregor;1791;3287;1668
+23;V ;Vanadium;Vanad;50.942;1.630;17;A.M. del Rio;1801;3407;1910
+24;Cr;Chromium;Chrom;51.996;1.660;17;L.N. Vauquelin;1797;2671;1907
+25;Mn;Manganum;Mangan;54.938;1.550;17;J.G. Gahn;1774;2061;1246
+26;Fe;Ferrum;Zelezo;55.845;1.830;17;Chetite;5000 pr. n. l.;2862;1538
+27;Co;Cobaltum;Kobalt;58.933;1.880;17;G. Brandt;1735;2927;1495
+28;Ni;Niccolum;Nikl;58.693;1.910;17;A.F. Cronstedt;1751;2730;1455
+29;Cu;Cuprum;Med;63.546;1.900;17;Mezopotamie;9000 pr. n. l.;2562;1084.62
+30;Zn;Zincum;Zinek;65.380;1.650;17;Egypt;1400 pr. n. l.;907;419.53
+31;Ga;Gallium;Gallium;69.723;1.810;26;P. Lecoq;1875;2204;29.76
+32;Ge;Germanium;Germanium;72.630;2.010;21;C. Winkler;1886;2833;938.25
+33;As;Arsenicum;Arsen;74.922;2.180;21;J.i. Hayyan;815;614;817
+34;Se;Selenium;Selen;78.971;2.550;5;J. Berzelius;1817;684.9;221
+35;Br;Bromum;Brom;79.904;2.960;42;A.J. Balard;1826;59;7.2
+36;Kr;Krypton;Krypton;83.798;0.000;31;W. Ramsay;1898;-153.22;-157.37
+37;Rb;Rubidium;Rubidium;85.468;0.820;9;R. Bunsen;1861;688;39.3
+38;Sr;Strontium;Stroncium;87.620;0.950;13;W. Cruickshank;1790;1382;777
+39;Y ;Yttrium;Yttrium;88.906;1.220;17;J. Gadolin;1794;3338;1526
+40;Zr;Zirconium;Zirkonium;91.224;1.330;17;M.H. Klaproth;1789;4409;1855
+41;Nb;Niobium;Niob;92.906;1.600;17;C. Hatchett;1801;4744;2477
+42;Mo;Molybdenum;Molybden;95.950;2.160;17;C. Scheele;1778;4639;2623
+43;Tc;Technetium;Technecium;98.000;1.900;17;C. Perrier;1937;4265;2157
+44;Ru;Ruthenium;Rutenium;101.070;2.200;17;K. Klaus;1844;4423;2334
+45;Rh;Rhodium;Rhodium;102.910;2.280;17;W. Wollaston;1803;3695;1964
+46;Pd;Palladium;Palladium;106.420;2.200;17;W. Wollaston;1803;2963;1554.9
+47;Ag;Argentum;Stribro;107.870;1.930;17;N/A;5000 pr. n. l.;2162;961.78
+48;Cd;Cadmium;Kadmium;112.410;1.690;17;F. Stromeyer;1817;767;321.07
+49;In;Indium;Indium;114.820;1.780;25;F. Reich;1863;2072;156.6
+50;Sn;Stannum;Cin;118.710;1.960;25;N/A;3500 pr. n. l.;2602;231.93
+51;Sb;Stibium;Antimon;121.760;2.050;21;Egypt;3100 pr. n. l.;1587;630.63
+52;Te;Tellurium;Tellur;127.600;2.100;21;F.J. Muller;1782;988;449.51
+53;I ;Iodum;Jod;126.900;2.660;41;B. Courtois;1811;184.3;113.7
+54;Xe;Xenon;Xenon;131.290;2.600;31;W. Ramsay;1898;-108.12;-111.8
+55;Cs;Caesium;Cesium;132.910;0.790;10;R. Bunsen;1860;671;28.44
+56;Ba;Barium;Baryum;137.330;0.890;13;H. Davy;1808;1897;727
+57;La;Lanthanum;Lantan;138.910;1.100;33;C. Mosander;1839;3464;920
+58;Ce;Cerium;Cer;140.120;1.120;33;M.H. Klaproth;1803;3360;795
+59;Pr;Praseodymium;Praseodym;140.910;1.130;33;C. Mosander;1885;3290;931
+60;Nd;Neodymium;Neodym;144.240;1.140;33;C. Auer;1885;3127;1024
+61;Pm;Promethium;Promethium;145.000;1.130;33;J.A. Marinsky;1945;3000;1100
+62;Sm;Samarium;Samarium;150.360;1.170;33;P.E. Lecoq;1879;1794;1072
+63;Eu;Europium;Europium;151.960;1.200;33;E.-A. Demarcay;1901;1529;822
+64;Gd;Gadolinium;Gadolin;157.250;1.200;33;J.C.G. Marignac;1880;3273;1312
+65;Tb;Terbium;Terbium;158.930;1.200;33;G. Mosander;1843;3230;1356
+66;Dy;Dysprosium;Dysprosium;162.500;1.220;33;P.E. Lecoq;1886;2567;1407
+67;Ho;Holmium;Holmium;164.930;1.230;33;M. Delafontaine;1878;2700;1474
+68;Er;Erbium;Erbium;167.260;1.240;33;C. Mosander;1842;2868;1529
+69;Tm;Thulium;Thulium;168.930;1.250;33;P.E. Lecoq;1879;1950;1545
+70;Yb;Ytterbium;Ytterbium;173.050;1.100;33;J.C.G. Marignac;1878;1466;824
+71;Lu;Lutetium;Lutecium;174.970;1.270;33;G. Urbain;1907;3402;1652
+72;Hf;Hafnium;Hafnium;178.490;1.300;17;D. Coster;1923;4602;2150
+73;Ta;Tantalum;Tantal;180.950;1.500;17;A.G. Ekeberg;1802;5458;2996
+74;W ;Wolframium;Wolfram;183.840;2.360;17;J. d'Elhuyar;1783;5930;3422
+75;Re;Rhenium;Rhenium;186.210;1.900;17;I. Noddack;1925;5596;3186
+76;Os;Osmium;Osmium;190.230;2.200;17;S. Tennant;1803;5027;3033
+77;Ir;Iridium;Iridium;192.220;2.200;17;S. Tennant;1803;4428;2466
+78;Pt;Platinum;Platina;195.080;2.280;17;A. de Ulloa;1735;3827;1768.3
+79;Au;Aurum;Zlato;196.970;2.540;17;N/A;6000 pr. n. l.;2970;1064.18
+80;Hg;Hydrargyrum;Rtut;200.590;2.000;18;Egypt;1500 pr. n. l.;356.73;-38.83
+81;Tl;Thallium;Talium;204.380;1.620;25;W. Crookes;1861;1473;304
+82;Pb;Plumbum;Olovo;207.200;2.330;25;Mala Asie;7000 pr. n. l.;1749;327.46
+83;Bi;Bismuthum;Bismut;208.980;2.020;25;C. Geoffroy;1753;1564;271.3
+84;Po;Polonium;Polonium;209.000;2.000;21;M. Curie;1898;962;254
+85;At;Astatinum;Astat;210.000;2.200;41;D. Corson;1940;337;302
+86;Rn;Radon;Radon;222.000;0.000;31;F. Dorn;1900;-61.7;-71
+87;Fr;Francium;Francium;223.000;0.700;9;M. Perey;1939;677;27
+88;Ra;Radium;Radium;226.000;0.900;13;P. a M. Curie;1898;1737;700
+89;Ac;Actinium;Aktinium;227.000;1.100;37;F. Giesel;1899;3200;1050
+90;Th;Thorium;Thorium;232.040;1.300;37;J. Berzelius;1829;4788;1750
+91;Pa;Protactinium;Protaktinium;231.040;1.500;37;O. Hahn;1913;4000;1568
+92;U ;Uranium;Uran;238.030;1.380;37;M.H. Klaproth;1789;4131;1132.2
+93;Np;Neptunium;Neptunium;237.000;1.360;37;E.M. McMillan;1940;4273;644
+94;Pu;Plutonium;Plutonium;244.000;1.280;37;G.T. Seaborg;1940;3505;640
+95;Am;Americium;Americium;243.000;1.300;37;G.T. Seaborg;1944;2880;1176
+96;Cm;Curium;Curium;247.000;1.300;37;G.T. Seaborg;1944;3383;1340
+97;Bk;Berkelium;Berkelium;247.000;1.300;37;S. Thompson;1949;2900;986
+98;Cf;Californium;Kalifornium;251.000;1.300;37;S. Thompson;1950;1743;900
+99;Es;Einsteinium;Einsteinium;252.000;1.300;37;A. Ghiorso;1952;1133;860
+100;Fm;Fermium;Fermium;257.000;1.300;37;A. Ghiorso;1952;1800;1527
+101;Md;Mendelevium;Mendelevium;258.000;1.300;37;A. Ghiorso;1955;1100;827
+102;No;Nobelium;Nobelium;259.000;1.300;37;A. Ghiorso;1958;0;827
+103;Lr;Lawrencium;Lawrencium;262.000;1.300;37;A. Ghiorso;1961;0;1627
+104;Rf;Rutherfordium;Rutherfordium;267.000;1.300;17;G. Flerov;1964;0;0
+105;Db;Dubnium;Dubnium;268.000;1.300;17;G. Flerov;1967;0;0
+106;Sg;Seaborgium;Seaborgium;269.000;1.300;17;G. Flerov;1974;0;0
+107;Bh;Bohrium;Bohrium;270.000;1.300;17;G. Flerov;1981;0;0
+108;Hs;Hassium;Hassium;269.000;1.300;17;G. Flerov;1984;0;0
+109;Mt;Meitnerium;Meitnerium;278.000;1.300;17;G. Munzenberg;1982;0;0
+110;Ds;Darmstadtium;Darmstadtium;281.000;1.300;17;G. Munzenberg;1994;0;0
+111;Rg;Roentgenium;Roentgenium;282.000;1.300;17;G. Munzenberg;1994;0;0
+112;Cn;Copernicium;Copernicium;285.000;1.300;18;G. Munzenberg;1996;0;0
+113;Nh;Nihonium;Nihonium;286.000;1.300;25;K. Morita;2004;0;0
+114;Fl;Flerovium;Flerovium;289.000;1.300;25;Y. Oganessian;1999;0;0
+115;Mc;Moscovium;Moscovium;290.000;1.300;25;Y. Oganessian;2003;0;0
+116;Lv;Livermorium;Livermorium;293.000;1.300;25;Y. Oganessian;2000;0;0
+117;Ts;Tennessine;Tennessin;294.000;1.300;41;Y. Oganessian;2010;0;0
+118;Og;Oganesson;Oganesson;294.000;1.300;31;Y. Oganessian;2002;0;0

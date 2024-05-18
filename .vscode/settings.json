@@ -8,6 +8,8 @@
         "getkey.h": "c",
         "tabledraw.h": "c",
         "tablemodes.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "stdarg.h": "c",
+        "string.h": "c"
     }
 }

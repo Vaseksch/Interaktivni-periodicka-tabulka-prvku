@@ -92,20 +92,29 @@ void getMode()
         strcpy(modeBasedOutput1.modeName, "2 - hodnoty");
         break;
     case 3:
-
         strcpy(modeBasedOutput1.dataLine0, "skupina:    ");
         strcpy(modeBasedOutput1.dataLine1, "skupenstvi:       ");
         strcpy(modeBasedOutput1.modeName, "3 - vlastnosti");
         break;
+    case 4:
+        strcpy(modeBasedOutput1.dataLine0, "bod varu K:    ");
+        strcpy(modeBasedOutput1.dataLine1, "bod tani K:       ");
+        strcpy(modeBasedOutput1.modeName, "4 - teploty");
+        break;
+    case 5:
+        strcpy(modeBasedOutput1.dataLine0, "rok objevanei:    ");
+        strcpy(modeBasedOutput1.dataLine1, "objevitel:       ");
+        strcpy(modeBasedOutput1.modeName, "5 - historie");
+        break;        
     }
 }
 
 //checks if value of element isnt 0, if it is 0 then it prints N/A, int line argument is Y offset from data output anchor position
-void printIfvalueIsValid(float value, char format[5], int line){
+void printIfvalueIsValid(float value, char format[5], int position_X , int position_Y){
     if(value != 0){
-          printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + line, format, value);  
+          printLine(position_X, staticLabelPosY + position_Y, format, value);  
         }else{
-          printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + line, "%s", "N/A");
+          printLine(position_X, staticLabelPosY + position_Y, "%s", "N/A");
         }
 }
 
@@ -127,8 +136,8 @@ void updateOutput()
     case 2:
         printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
         printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
-        printIfvalueIsValid(inputFileStructure.Ar, "%.3f", 2);
-        printIfvalueIsValid(inputFileStructure.electronegativity, "%.3f", 3);
+        printIfvalueIsValid(inputFileStructure.Ar, "%.3f", staticLabelPosX + dataOutputOffset, 2);
+        printIfvalueIsValid(inputFileStructure.electronegativity, "%.3f", staticLabelPosX + dataOutputOffset, 3);
         printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
     case 3:
@@ -138,5 +147,19 @@ void updateOutput()
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.StandardState);
         printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
+    case 4:
+        printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
+        printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
+        printIfvalueIsValid(inputFileStructure.boilingPoint, "%.3f", staticLabelPosX + dataOutputOffset, 2);
+        printIfvalueIsValid(inputFileStructure.meltingPoint, "%.3f", staticLabelPosX + dataOutputOffset, 3);
+        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
+        break;  
+    case 5:
+        printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
+        printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
+        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%s", inputFileStructure.discoveryYear);
+        printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.discoverer);
+        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
+        break;                
     }
 }

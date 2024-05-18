@@ -5,13 +5,13 @@
 #include "headers/movement.h"
 
 
-void drawBoard(FILE *fptr)
+void drawBoard(FILE *fptr, int resetPosition)
 {
     for (int col = 0; col < column; col++)
     {
         for (int rowTop = 0; rowTop < row; rowTop++)
         {
-            // pro nacteni vlastnosti boxu vymaskuji prvni 3 bity
+             //first 3 bits are masked
             switch (grid[col][rowTop] & 0x7)
             {
             case 0:
@@ -40,7 +40,8 @@ void drawBoard(FILE *fptr)
         printf("\n");
         for (int rowWall = 0; rowWall < row; rowWall++)
         {
-            switch (grid[col][rowWall] & 0x7) // pro nacteni vlastnosti boxu vymaskuji prvni 3 bity
+            //first 3 bits are masked
+            switch (grid[col][rowWall] & 0x7)
             {
             case 0:
                 printf("     ");
@@ -68,6 +69,8 @@ void drawBoard(FILE *fptr)
             }
         }
         printf("\n");
-        alignCursor();
+        if(resetPosition == 1){
+           alignCursor(); 
+        }
     }
 }
