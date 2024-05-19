@@ -66,16 +66,18 @@ void printStaticLabels()
     printLine(staticLabelPosX, staticLabelPosY, "%s", "cislo prvku:");
     printLine(staticLabelPosX, staticLabelPosY + 1, "%s", "zkratka:");
     // controls labels
-    printLine(5, 25, "%s", "pohyb: < > ^ v");
-    printLine(5, 26, "%s", "dalsi rezim: PG_DN");
-    printLine(5, 27, "%s", "predchozi rezim: PG_UP");
+    printLine(4, 24, "%s", "pohyb: < > ^ v");
+    printLine(4, 25, "%s", "podrobnosti: ENTER");
+    printLine(4, 26, "%s", "dalsi rezim: PG_DN");
+    printLine(4, 27, "%s", "predchozi rezim: PG_UP");
     printLine(80, 26, "%s", "rezim:");
     printLine(80, 28, "%s", "Aktualni ke dni 4.5.2022 podle IUPAC");
-    printLine(5, 28, "%s", "konec: ESC");
+    printLine(4, 28, "%s", "konec: ESC");
     // reset cursor to previous position
     moveCursor(curentPosition.XX, curentPosition.YY);
 }
 
+//sets label for selected mode
 void getMode()
 {
     switch (tableMode)
@@ -97,8 +99,8 @@ void getMode()
         strcpy(modeBasedOutput1.modeName, "3 - vlastnosti");
         break;
     case 4:
-        strcpy(modeBasedOutput1.dataLine0, "bod varu K:    ");
-        strcpy(modeBasedOutput1.dataLine1, "bod tani K:       ");
+        strcpy(modeBasedOutput1.dataLine0, "bod varu C:    ");
+        strcpy(modeBasedOutput1.dataLine1, "bod tani C:       ");
         strcpy(modeBasedOutput1.modeName, "4 - teploty");
         break;
     case 5:
@@ -124,39 +126,31 @@ void updateOutput()
     getMode();
     printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 0, "%s", inputFileStructure.elementntNumber);
     printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 1, "%s", inputFileStructure.shortcut);
+    printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
+    printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
     switch (tableMode)
     {
     case 1:
-        printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
-        printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%s", inputFileStructure.czName);
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.laName);
         printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
     case 2:
-        printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
-        printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
         printIfvalueIsValid(inputFileStructure.Ar, "%.3f", staticLabelPosX + dataOutputOffset, 2);
         printIfvalueIsValid(inputFileStructure.electronegativity, "%.3f", staticLabelPosX + dataOutputOffset, 3);
         printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
     case 3:
-        printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
-        printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%s", inputFileStructure.Group);
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.StandardState);
         printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
     case 4:
-        printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
-        printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
         printIfvalueIsValid(inputFileStructure.boilingPoint, "%.3f", staticLabelPosX + dataOutputOffset, 2);
         printIfvalueIsValid(inputFileStructure.meltingPoint, "%.3f", staticLabelPosX + dataOutputOffset, 3);
         printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;  
     case 5:
-        printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
-        printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%s", inputFileStructure.discoveryYear);
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.discoverer);
         printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);

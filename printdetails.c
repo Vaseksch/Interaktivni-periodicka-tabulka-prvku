@@ -17,21 +17,34 @@ void printDetails(FILE *fptr, int *inptPtr)
     printLine(5, staticLabelPosY + 1, "cislo prvku: %s", inputFileStructure.elementntNumber);
     printLine(5, staticLabelPosY + 2, "cesky nazev: %s", inputFileStructure.czName);
     printLine(5, staticLabelPosY + 3, "latinsky nazev: %s", inputFileStructure.laName);
-    printIfvalueIsValid(inputFileStructure.Ar, "relativni atomova hmotnost: %.3f", 5, 4);
-    printIfvalueIsValid(inputFileStructure.electronegativity, "elektronegativita: %.3f", 5, 5);
-    printIfvalueIsValid(inputFileStructure.boilingPoint, "bod varu: %.3f", 5, 6);
+    
+    printLine(5, staticLabelPosY + 4, "relativni atomova hmotnost:");
+    printIfvalueIsValid(inputFileStructure.Ar, "%.3f", 33, 4);
+
+    printLine(5, staticLabelPosY + 5, "elektronegativita:");
+    printIfvalueIsValid(inputFileStructure.electronegativity, "%.3f", 24, 5);
+
+    printLine(5, staticLabelPosY + 6, "bod varu:");
+    printIfvalueIsValid(inputFileStructure.boilingPoint, "%.3f", 15, 6);
     printf(" %cC", 248);
-    printIfvalueIsValid(inputFileStructure.meltingPoint, "bod tani: %.3f", 5, 7);
+
+    printLine(5, staticLabelPosY + 7, "bod tani:");
+    printIfvalueIsValid(inputFileStructure.meltingPoint, "%.3f", 15, 7);
     printf(" %cC", 248);
+
     printLine(5, staticLabelPosY + 8, "skupina: %s", inputFileStructure.Group);
     printLine(5, staticLabelPosY + 9, "skupenstvi: %s", inputFileStructure.StandardState);
     printLine(5, staticLabelPosY + 10, "objevitel/misto objeveni: %s", inputFileStructure.discoverer);
     printLine(5, staticLabelPosY + 11, "rok objeveni: %s", inputFileStructure.discoveryYear);
+    printLine(5, staticLabelPosY + 23, "navrat: BACKSPACE");
+    printLine(5, staticLabelPosY + 24, "konec: ESC");
 
+    //waits for backspace to end the loop
     while (*inptPtr != 2)
     {
         *inptPtr = keyDown();
     }
+    //clears console and redraws the table
     system("cls");
     drawBoard(fptr, 0);
     printStaticLabels();
