@@ -31,7 +31,7 @@ switch (inpt) {
       }else{
         tableMode = 1;
       }
-      break;                 
+      break;              
     case 72: //up
       output = 3;
       break;
@@ -51,7 +51,16 @@ switch (inpt) {
       }else{
         output = 0;
       }
-      break;      
+      break;
+    case 82: //INSERT
+      output = 7;
+      break;
+    case 71: //HOME
+      output = 8;
+      break;
+    case 83: //DELETE
+      output = 9;
+      break;       
   }
   return output;
 }

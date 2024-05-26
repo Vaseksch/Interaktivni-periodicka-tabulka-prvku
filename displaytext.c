@@ -70,6 +70,8 @@ void printStaticLabels()
     printLine(4, 25, "%s", "podrobnosti: ENTER");
     printLine(4, 26, "%s", "dalsi rezim: PG_DN");
     printLine(4, 27, "%s", "predchozi rezim: PG_UP");
+    printLine(40, 26, "%s", "vypocet Mm: HOME");
+    printLine(40, 27, "%s", "pridat do vypoctu Mm: INSERT");
     printLine(80, 26, "%s", "rezim:");
     printLine(80, 28, "%s", "Aktualni ke dni 4.5.2022 podle IUPAC");
     printLine(4, 28, "%s", "konec: ESC");

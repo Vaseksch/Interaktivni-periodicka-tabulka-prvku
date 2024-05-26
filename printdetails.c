@@ -43,6 +43,10 @@ void printDetails(FILE *fptr, int *inptPtr)
     while (*inptPtr != 2)
     {
         *inptPtr = keyDown();
+        if (*inptPtr == -1)
+        {
+            exit(0);
+        }
     }
     //clears console and redraws the table
     system("cls");
