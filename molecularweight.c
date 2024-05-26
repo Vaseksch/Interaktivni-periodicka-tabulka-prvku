@@ -47,6 +47,8 @@ void molecularWeightScreen(FILE *fptr, int *inptPtr)
     buildMoleculeOutput(fptr);
 
     //prints molecule data
+    clearPreviousOutput(15, 8);
+    clearPreviousOutput(30, 8);
     printLine(5, staticLabelPosY + 5, "Molekula: %s", moleculeOutput);
     printLine(5, staticLabelPosY + 6, "Mm: %.3f g/mol", molecularWeight);
 
@@ -76,6 +78,8 @@ void molecularWeightScreen(FILE *fptr, int *inptPtr)
             }
             buildMoleculeOutput(fptr);
             resetMolecularWeight();
+            clearPreviousOutput(15, 8);
+            clearPreviousOutput(30, 8);
             printLine(5, staticLabelPosY + 5, "Molekula: %s", moleculeOutput);
             printLine(5, staticLabelPosY + 6, "Mm: %.3f g/mol", molecularWeight);
         }
