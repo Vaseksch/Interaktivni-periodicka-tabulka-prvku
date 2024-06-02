@@ -5,9 +5,6 @@
 #define StandardStateMode 1
 #define DEFAULMO 0
 
-
-void printElementInMode();
-
 void drawBoard(FILE * fptr, int resetPosition);
 
 #endif
