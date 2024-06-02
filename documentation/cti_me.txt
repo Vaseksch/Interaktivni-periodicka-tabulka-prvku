@@ -1,0 +1,7 @@
+Pokud chcete povolit ANSI escape sekvence v cmd.exe, musíte vložit následující příkaz do CMD:
+
+reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1
+
+Pokud chcete zakázat ANSI escape sekvence v cmd.exe, musíte vložit následující příkaz do CMD:
+
+reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 0
