@@ -2,11 +2,21 @@
 #define MOLECULARWEIGHT_H_
 
 float molecularWeight;
-char molecule[118];
 char moleculeOutput[64];
-char holdNumber[10];
-char holdElement[10];
+char shortcutRemovedSpaces[3];
+char atomCount[4];
 int saved;
+int withoutSpacesCount;
+
+struct atom {
+    char shortcut[3]; 
+    int number; 
+    int count;
+    int full;
+};
+
+struct atom elementList[16];
+  
 
 void buildMoleculeOutput(FILE *fptr);
 
@@ -14,7 +24,7 @@ int saveOutput();
 
 void molecularWeightScreen(FILE * fptr, int * inptPtr);
 
-void addMolecularWeight();
+int addMolecularWeight();
 
 void resetMolecularWeight();
 

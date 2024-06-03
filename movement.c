@@ -82,7 +82,10 @@ void updateCursorPosition(FILE *fprt, int input)
   moveCursor(curentPosition.XX, curentPosition.YY);
   printf("\033[0m %s \033[0m", inputFileStructure.shortcut);
   cursorCordsUpdate(input);
+
+  //number of selected element is saved to int search
   int search = grid[curentPosition.col][curentPosition.line] >> 3;
+
   moveCursor(curentPosition.XX, curentPosition.YY);
   readElement(fprt, search);
   printf("\033[47;30m %s \033[0m", inputFileStructure.shortcut);

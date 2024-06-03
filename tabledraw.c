@@ -4,7 +4,8 @@
 #include "headers/tabledata.h"
 #include "headers/movement.h"
 
-
+//fill int resetPosition with 1 to reset cursor position
+//fill int resetPosition with 0 to keep previous cursor position
 void drawBoard(FILE *fptr, int resetPosition)
 {
     for (int col = 0; col < column; col++)

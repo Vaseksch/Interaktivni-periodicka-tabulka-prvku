@@ -54,6 +54,7 @@ void decodeProperties(char * propertiesinput){
     }
 }
 
+//function reads line from file, splits the line into tokens and saves those tokens into structure
 int readElement(FILE * fptr, int number){
     char lineInput[128];
     int line = 1;

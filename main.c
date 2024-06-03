@@ -27,17 +27,21 @@ int main(){
     updateCursorPosition(fptr ,inpt);
     printf("\033[?25l");
     
+    //while repeats until ESC key isn't hit
     while (inpt != -1)
     {
         updateOutput();
         inpt = keyDown(); 
         updateCursorPosition(fptr ,inpt);
+        //details screen
         if(inpt == 1){
             printDetails(fptr, &inpt);
         }
+        //Mm calculation screen
         if(inpt == 8){
             molecularWeightScreen(fptr, &inpt);
-        } 
+        }
+        //element is added to molecule 
         if(inpt == 7){
             addMolecularWeight();
         }

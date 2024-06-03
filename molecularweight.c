@@ -8,29 +8,37 @@
 #include "headers/tabledraw.h"
 #include "headers/getkey.h"
 
+//builds shortcut of molecule
 void buildMoleculeOutput(FILE *fptr){
-    for(int arrayPosition = 0; arrayPosition < 118; arrayPosition++){
-        moleculeOutput[arrayPosition] = 0;
-    }
-    for(int pos = 0; pos < 118; pos++){
-        if(molecule[pos] != 0){
-            readElement(fptr, pos);
-            for(int index = 0; inputFileStructure.shortcut[index] != 0; index++){
-                if(inputFileStructure.shortcut[index] != ' '){
-                    holdElement[index] = inputFileStructure.shortcut[index];
+    moleculeOutput[0] = 0;
+    for(int arrayPosition = 0; arrayPosition < 16; arrayPosition++){
+        if (elementList[arrayPosition].full == 1)
+        {
+            //removes spaces
+            withoutSpacesCount = 0;
+            for(int charecterPosition = 0; charecterPosition < 3; charecterPosition++){
+                if(elementList[arrayPosition].shortcut[charecterPosition] != ' '){
+                    shortcutRemovedSpaces[withoutSpacesCount] = elementList[arrayPosition].shortcut[charecterPosition];
+                    withoutSpacesCount++;
                 }
             }
-            strcat(moleculeOutput, holdElement);
-            if(molecule[pos] > 1){
-                 sprintf(holdNumber, "%d", molecule[pos]);
-                 strcat(moleculeOutput, holdNumber);
+            //appends element shortcut to moleculeOutput
+            strcat(moleculeOutput, shortcutRemovedSpaces);
+            if (elementList[arrayPosition].count > 1)
+            {
+                //convetrs int to string and appends count to moleculeOutput
+                sprintf(atomCount, "%d", elementList[arrayPosition].count);
+                strcat(moleculeOutput, atomCount);
             }
+            
         }
+        
     }
 }
 
 int saveOutput(){
     FILE * fptrOutput = fopen("output/vysledky.txt", "a+");
+    //error handling
     if(fptrOutput == NULL){
         MessageBoxW(GetConsoleWindow(),L"Soubor se nepodařilo otevřít",L"ERROR",MB_OK | MB_ICONERROR | MB_APPLMODAL | MB_DEFBUTTON2);
         return 0;
@@ -46,9 +54,13 @@ void molecularWeightScreen(FILE *fptr, int *inptPtr)
     system("cls");
     buildMoleculeOutput(fptr);
 
-    //prints molecule data
+
     clearPreviousOutput(15, 8);
     clearPreviousOutput(30, 8);
+    clearPreviousOutput(15, 9);
+    clearPreviousOutput(30, 9);
+    
+    //prints molecule data
     printLine(5, staticLabelPosY + 5, "Molekula: %s", moleculeOutput);
     printLine(5, staticLabelPosY + 6, "Mm: %.3f g/mol", molecularWeight);
 
@@ -66,11 +78,16 @@ void molecularWeightScreen(FILE *fptr, int *inptPtr)
         *inptPtr = keyDown();
         if (*inptPtr == 7)
         {
-            saveOutput();   
+            if(molecularWeight > 0){
+                saveOutput();
+            }else{
+                MessageBoxW(GetConsoleWindow(),L"Příliž málo prvků v molekule",L"ERROR - nelze uložit",MB_OK | MB_ICONERROR | MB_APPLMODAL | MB_DEFBUTTON2);
+            }
+               
         }
         if (*inptPtr == 9)
         {
-            if(saved == 0){
+            if(saved == 0 && molecularWeight > 0){
                puts("\a");
             if(MessageBoxW(GetConsoleWindow(),L"Chcete před vynulovaní výsledek uložit?",L"vynulování",MB_YESNO | MB_ICONQUESTION | MB_APPLMODAL | MB_DEFBUTTON1) == 6){
                 saveOutput();
@@ -80,14 +97,17 @@ void molecularWeightScreen(FILE *fptr, int *inptPtr)
             resetMolecularWeight();
             clearPreviousOutput(15, 8);
             clearPreviousOutput(30, 8);
+            clearPreviousOutput(15, 9);
+            clearPreviousOutput(30, 9);
             printLine(5, staticLabelPosY + 5, "Molekula: %s", moleculeOutput);
             printLine(5, staticLabelPosY + 6, "Mm: %.3f g/mol", molecularWeight);
         }
         if (*inptPtr == -1)
         {
-            if(saved == 0){
+            //saves output only if you havent saved it before
+            if(saved == 0 && molecularWeight > 0){
                puts("\a");
-            if(MessageBoxW(GetConsoleWindow(),L"Chcete před vynulovaní výsledek uložit?",L"vynulování",MB_YESNO | MB_ICONQUESTION | MB_APPLMODAL | MB_DEFBUTTON1) == 6){
+            if(MessageBoxW(GetConsoleWindow(),L"Chcete před ukončením výsledek uložit?",L"vynulování",MB_YESNO | MB_ICONQUESTION | MB_APPLMODAL | MB_DEFBUTTON1) == 6){
                 saveOutput();
             } 
             }
@@ -102,20 +122,36 @@ void molecularWeightScreen(FILE *fptr, int *inptPtr)
     updateOutput();
 }
 
-void addMolecularWeight()
+int addMolecularWeight()
 {
     saved = 0;
     molecularWeight += inputFileStructure.Ar;
-    molecule[atoi(inputFileStructure.elementntNumber)]++;
+    for(int arrayPosition = 0; arrayPosition < 16; arrayPosition++){  
+        if(elementList[arrayPosition].full == 1 && strcmp(elementList[arrayPosition].shortcut, inputFileStructure.shortcut) == 0){
+            //in case the selected element is already contained in the structure array  
+            elementList[arrayPosition].count++;
+            return 0;
+        }else if (elementList[arrayPosition].full == 0)
+        {
+            //in case the selected element is not contained in the structure array  
+            strcpy(elementList[arrayPosition].shortcut, inputFileStructure.shortcut);
+            elementList[arrayPosition].count++;
+            elementList[arrayPosition].full = 1;
+            return 0;
+        }
+        
+    }
 }
 
 void resetMolecularWeight()
 {
     molecularWeight = 0;
     saved = 0;
-    for(int arrayPosition = 0; arrayPosition < 118; arrayPosition++){
-        molecule[arrayPosition] = 0;
-        moleculeOutput[arrayPosition] = 0;
+    moleculeOutput[0] = 0;
+    for(int arrayPosition = 0; arrayPosition < 16; arrayPosition++){
+        elementList[arrayPosition].shortcut[0] = 0;
+        elementList[arrayPosition].count = 0;
+        elementList[arrayPosition].full = 0;
     }
 }
 
