@@ -19,19 +19,15 @@ void drawBoard(FILE *fptr, int resetPosition)
                 printf("     ");
                 break;
             case 1:
+            case 4:
                 printf("+----");
                 break;
             case 2:
+            case 5:
                 printf("+----+");
                 break;
             case 3:
                 printf("    ");
-                break;
-            case 4:
-                printf("+----");
-                break;
-            case 5:
-                printf("+----+");
                 break;
             case 6:
                 printf("----");
@@ -44,9 +40,6 @@ void drawBoard(FILE *fptr, int resetPosition)
             //first 3 bits are masked
             switch (grid[col][rowWall] & 0x7)
             {
-            case 0:
-                printf("     ");
-                break;
             case 1:
                 readElement(fptr, grid[col][rowWall] >> 3);
                 printf("| %s ", inputFileStructure.shortcut);
@@ -56,16 +49,13 @@ void drawBoard(FILE *fptr, int resetPosition)
                 printf("| %s |", inputFileStructure.shortcut);
                 break;
             case 3:
-                printf("    ");
-                break;
-            case 4:
-                printf("     ");
-                break;
-            case 5:
-                printf("     ");
-                break;
             case 6:
                 printf("    ");
+                break;
+            case 0:
+            case 4:
+            case 5:
+                printf("     ");
                 break;
             }
         }
