@@ -10,8 +10,7 @@
 void clearPreviousOutput(int XOrigin, int YOrigin)
 {
     moveCursor(XOrigin, YOrigin);
-    for (int spaceCount = 0; spaceCount < maxOutputLenght; spaceCount++)
-    {
+    for (int spaceCount = 0; spaceCount < maxOutputLenght; spaceCount++){
         printf(" ");
     }
     moveCursor(XOrigin, YOrigin);
@@ -30,31 +29,24 @@ void printLine(int XOrigin, int YOrigin, char *format, ...)
 void printStaticLabels()
 {
     // column and line numbers
-    for (int columnNumbers = 1; columnNumbers <= 18; columnNumbers++)
-    {
-        if (columnNumbers == 1 || columnNumbers == 18)
-        {
+    for (int columnNumbers = 1; columnNumbers <= 18; columnNumbers++){
+        if (columnNumbers == 1 || columnNumbers == 18){
             moveCursor(7 + (5 * columnNumbers), 3);
         }
-        if (columnNumbers == 2 || (columnNumbers > 12 && columnNumbers < 18))
-        {
+        if (columnNumbers == 2 || (columnNumbers > 12 && columnNumbers < 18)){
             moveCursor(7 + (5 * columnNumbers), 5);
         }
-        if (columnNumbers > 2 && columnNumbers < 13)
-        {
+        if (columnNumbers > 2 && columnNumbers < 13){
             moveCursor(7 + (5 * columnNumbers), 9);
         }
         printf("%d", columnNumbers);
     }
-    for (int columnNumbers = 1; columnNumbers <= 7; columnNumbers++)
-    {
+    for (int columnNumbers = 1; columnNumbers <= 7; columnNumbers++){
         moveCursor(8, 3 + columnNumbers * 2);
         printf("%d", columnNumbers);
-        if (columnNumbers == 7)
-        {
+        if (columnNumbers == 7){
             int temp = 0;
-            for (columnNumbers = 9; columnNumbers <= 10; columnNumbers++)
-            {
+            for (columnNumbers = 9; columnNumbers <= 10; columnNumbers++){
                 moveCursor(23, 3 + columnNumbers * 2);
                 printf("%d", 6 + temp);
                 temp++;
@@ -130,32 +122,28 @@ void updateOutput()
     printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 1, "%s", inputFileStructure.shortcut);
     printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
     printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
+    printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
     switch (tableMode)
     {
     case 1:
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%s", inputFileStructure.czName);
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.laName);
-        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
     case 2:
         printIfvalueIsValid(inputFileStructure.Ar, "%.3f", staticLabelPosX + dataOutputOffset, 2);
         printIfvalueIsValid(inputFileStructure.electronegativity, "%.3f", staticLabelPosX + dataOutputOffset, 3);
-        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
     case 3:
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%s", inputFileStructure.Group);
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.StandardState);
-        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;
     case 4:
         printIfvalueIsValid(inputFileStructure.boilingPoint, "%.3f", staticLabelPosX + dataOutputOffset, 2);
         printIfvalueIsValid(inputFileStructure.meltingPoint, "%.3f", staticLabelPosX + dataOutputOffset, 3);
-        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;  
     case 5:
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%s", inputFileStructure.discoveryYear);
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.discoverer);
-        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
         break;                
     }
 }

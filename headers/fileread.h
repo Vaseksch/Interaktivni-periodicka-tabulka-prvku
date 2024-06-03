@@ -18,8 +18,6 @@ struct fileInputData{
 
 struct fileInputData inputFileStructure;
 
-void decodeProperties(char * propertiesinput);
-
 int readElement(FILE *fptr, int number);
 
 #endif

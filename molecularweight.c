@@ -52,7 +52,6 @@ void molecularWeightScreen(FILE *fptr, int *inptPtr)
     system("cls");
     buildMoleculeOutput(fptr);
 
-
     clearPreviousOutput(15, 8);
     clearPreviousOutput(30, 8);
     clearPreviousOutput(15, 9);

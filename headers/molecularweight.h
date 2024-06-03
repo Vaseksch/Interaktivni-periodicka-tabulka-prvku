@@ -17,15 +17,10 @@ struct atom {
 
 struct atom elementList[16];
   
-
 void buildMoleculeOutput(FILE *fptr);
-
 int saveOutput();
-
 void molecularWeightScreen(FILE * fptr, int * inptPtr);
-
 int addMolecularWeight();
-
 void resetMolecularWeight();
 
 #endif

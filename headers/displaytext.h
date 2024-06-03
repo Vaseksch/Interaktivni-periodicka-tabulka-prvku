@@ -18,17 +18,11 @@ struct modeBasedOutput
 };
 
 struct modeBasedOutput modeBasedOutput1;
-
 void clearPreviousOutput(int XOrigin, int YOrigin);
-
 void printLine(int XOrigin, int YOrigin, char *format, ...);
-
 void printStaticLabels();
-
 void getMode();
-
 void printIfvalueIsValid(float value, char format[5], int position_X , int position_Y);
-
 void updateOutput();
 
 #endif

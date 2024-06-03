@@ -10,13 +10,9 @@ struct position
 };
 
 struct position curentPosition;
-
 void alignCursor();
-
 void cursorCordsUpdate(int input);
-
 int moveCursor(int XX, int YY);
-
 void updateCursorPosition(FILE *fprt, int input);
 
 #endif

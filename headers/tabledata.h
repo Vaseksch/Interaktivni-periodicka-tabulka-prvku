@@ -6,7 +6,6 @@
 #define row 20
 
 extern int tableMode;
-
 extern int grid[column][row];
 
 #endif
