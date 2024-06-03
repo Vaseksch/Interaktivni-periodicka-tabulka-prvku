@@ -13,5 +13,6 @@
         "string.h": "c",
         "printdetails.h": "c",
         "molecularweight.h": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

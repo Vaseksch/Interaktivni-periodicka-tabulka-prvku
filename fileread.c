@@ -90,4 +90,3 @@ int readElement(FILE * fptr, int number){
     }
 
 }
-

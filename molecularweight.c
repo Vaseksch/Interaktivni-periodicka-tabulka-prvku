@@ -29,10 +29,8 @@ void buildMoleculeOutput(FILE *fptr){
                 //convetrs int to string and appends count to moleculeOutput
                 sprintf(atomCount, "%d", elementList[arrayPosition].count);
                 strcat(moleculeOutput, atomCount);
-            }
-            
-        }
-        
+            }    
+        } 
     }
 }
 
@@ -70,8 +68,6 @@ void molecularWeightScreen(FILE *fptr, int *inptPtr)
     printLine(5, staticLabelPosY + 23, "navrat: BACKSPACE");
     printLine(5, staticLabelPosY + 24, "konec: ESC");
 
-    
-
     // waits for backspace to end the loop
     while (*inptPtr != 2)
     {
@@ -82,8 +78,7 @@ void molecularWeightScreen(FILE *fptr, int *inptPtr)
                 saveOutput();
             }else{
                 MessageBoxW(GetConsoleWindow(),L"Příliž málo prvků v molekule",L"ERROR - nelze uložit",MB_OK | MB_ICONERROR | MB_APPLMODAL | MB_DEFBUTTON2);
-            }
-               
+            }     
         }
         if (*inptPtr == 9)
         {
@@ -139,7 +134,6 @@ int addMolecularWeight()
             elementList[arrayPosition].full = 1;
             return 0;
         }
-        
     }
 }
 
@@ -154,4 +148,3 @@ void resetMolecularWeight()
         elementList[arrayPosition].full = 0;
     }
 }
-
