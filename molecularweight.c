@@ -86,10 +86,6 @@ void molecularWeightScreen(FILE *fptr, int *inptPtr)
 {
     system("cls");
     buildMoleculeOutput(fptr);
-    clearPreviousOutput(15, 8);
-    clearPreviousOutput(30, 8);
-    clearPreviousOutput(15, 9);
-    clearPreviousOutput(30, 9);
     
     //prints molecule data
     printLine(5, staticLabelPosY + 5, "Molekula: %s", moleculeOutput);
@@ -124,9 +120,12 @@ void molecularWeightScreen(FILE *fptr, int *inptPtr)
                 } 
             }
             buildMoleculeOutput(fptr);
+            //clears printed molecule
+            moveCursor(15, 8);
+            for(int deleteCount = 0; deleteCount < strlen(moleculeOutput); deleteCount++){
+                printf(" ");
+            }
             resetMolecularWeight();
-            clearPreviousOutput(15, 8);
-            clearPreviousOutput(30, 8);
             clearPreviousOutput(15, 9);
             clearPreviousOutput(30, 9);
             printLine(5, staticLabelPosY + 5, "Molekula: %s", moleculeOutput);
@@ -163,7 +162,7 @@ int addMolecularWeight()
     saved = 0;
     molecularWeight += inputFileStructure.Ar;
     for(int arrayPosition = 0; arrayPosition < 16; arrayPosition++){  
-        if(elementList[arrayPosition].full == 1 && strcmp(elementList[arrayPosition].shortcut, inputFileStructure.shortcut) == 0){
+        if(elementList[arrayPosition].full == 1 && strcmp(elementList[arrayPosition].shortcut, inputFileStructure.shortcut) == 0 && elementList[arrayPosition].count < 1000){
             //in case the selected element is already contained in the structure array  
             elementList[arrayPosition].count++;
             return 0;
