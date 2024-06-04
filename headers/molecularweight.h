@@ -19,7 +19,8 @@ struct atom {
 };
 
 struct atom elementList[16];
-  
+
+void printTableOfResults(FILE *fptr, int *inptPtr); 
 void buildMoleculeOutput(FILE *fptr);
 int saveOutput();
 void molecularWeightScreen(FILE * fptr, int * inptPtr);
