@@ -71,40 +71,6 @@ void printStaticLabels()
     moveCursor(curentPosition.XX, curentPosition.YY);
 }
 
-//sets label for selected mode
-void getMode()
-{
-    switch (tableMode)
-    {
-    case 1:
-        strcpy(modeBasedOutput1.dataLine0, "cesky nazev:");
-        strcpy(modeBasedOutput1.dataLine1, "latinsky nazev:   ");
-        strcpy(modeBasedOutput1.modeName, "1 - nazvy");
-        break;
-
-    case 2:
-        strcpy(modeBasedOutput1.dataLine0, "Ar:         ");
-        strcpy(modeBasedOutput1.dataLine1, "elektronegativita:");
-        strcpy(modeBasedOutput1.modeName, "2 - hodnoty");
-        break;
-    case 3:
-        strcpy(modeBasedOutput1.dataLine0, "skupina:    ");
-        strcpy(modeBasedOutput1.dataLine1, "skupenstvi:       ");
-        strcpy(modeBasedOutput1.modeName, "3 - vlastnosti");
-        break;
-    case 4:
-        strcpy(modeBasedOutput1.dataLine0, "bod varu C:    ");
-        strcpy(modeBasedOutput1.dataLine1, "bod tani C:       ");
-        strcpy(modeBasedOutput1.modeName, "4 - teploty");
-        break;
-    case 5:
-        strcpy(modeBasedOutput1.dataLine0, "rok objevanei:    ");
-        strcpy(modeBasedOutput1.dataLine1, "objevitel:       ");
-        strcpy(modeBasedOutput1.modeName, "5 - historie");
-        break;        
-    }
-}
-
 //checks if value of element isnt 0, if it is 0 then it prints N/A, int line argument is Y offset from data output anchor position
 void printIfvalueIsValid(float value, char format[5], int position_X , int position_Y){
     if(value != 0){
@@ -117,33 +83,44 @@ void printIfvalueIsValid(float value, char format[5], int position_X , int posit
 // function prints data of selected element, int added to staticLabelPosY is Y offset from data output anchor position
 void updateOutput()
 {
-    getMode();
     printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 0, "%s", inputFileStructure.elementntNumber);
     printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 1, "%s", inputFileStructure.shortcut);
-    printLine(staticLabelPosX, staticLabelPosY + 2, "%s", modeBasedOutput1.dataLine0);
-    printLine(staticLabelPosX, staticLabelPosY + 3, "%s", modeBasedOutput1.dataLine1);
-    printLine(staticLabelPosX + 52, staticLabelPosY + 23, "%s", modeBasedOutput1.modeName);
     switch (tableMode)
     {
     case 1:
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%s", inputFileStructure.czName);
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.laName);
+        printLine(staticLabelPosX, staticLabelPosY + 2, "cesky nazev:");
+        printLine(staticLabelPosX, staticLabelPosY + 3, "latinsky nazev:   ");
+        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "1 - nazvy");
         break;
     case 2:
         printIfvalueIsValid(inputFileStructure.Ar, "%.3f", staticLabelPosX + dataOutputOffset, 2);
         printIfvalueIsValid(inputFileStructure.electronegativity, "%.3f", staticLabelPosX + dataOutputOffset, 3);
+        printLine(staticLabelPosX, staticLabelPosY + 2, "Ar:         ");
+        printLine(staticLabelPosX, staticLabelPosY + 3, "elektronegativita:");
+        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "2 - hodnoty");
         break;
     case 3:
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%s", inputFileStructure.Group);
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.StandardState);
+        printLine(staticLabelPosX, staticLabelPosY + 2, "skupina:    ");
+        printLine(staticLabelPosX, staticLabelPosY + 3, "skupenstvi:       ");
+        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "3 - vlastnosti");
         break;
     case 4:
         printIfvalueIsValid(inputFileStructure.boilingPoint, "%.3f", staticLabelPosX + dataOutputOffset, 2);
         printIfvalueIsValid(inputFileStructure.meltingPoint, "%.3f", staticLabelPosX + dataOutputOffset, 3);
+        printLine(staticLabelPosX, staticLabelPosY + 2, "bod varu C:    ");
+         printLine(staticLabelPosX, staticLabelPosY + 3, "bod tani C:       ");
+        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "4 - teploty");
         break;  
     case 5:
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 2, "%s", inputFileStructure.discoveryYear);
         printLine(staticLabelPosX + dataOutputOffset, staticLabelPosY + 3, "%s", inputFileStructure.discoverer);
+        printLine(staticLabelPosX, staticLabelPosY + 2, "rok objevanei:    ");
+        printLine(staticLabelPosX, staticLabelPosY + 3, "objevitel:       ");
+        printLine(staticLabelPosX + 52, staticLabelPosY + 23, "5 - historie");
         break;                
     }
 }
