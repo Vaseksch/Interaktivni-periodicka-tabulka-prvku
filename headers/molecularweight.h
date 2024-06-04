@@ -8,6 +8,9 @@ char atomCount[4];
 int saved;
 int withoutSpacesCount;
 
+char Inputline[128];
+int line;
+
 struct atom {
     char shortcut[3]; 
     int number; 
