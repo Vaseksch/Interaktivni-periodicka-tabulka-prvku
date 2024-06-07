@@ -42,11 +42,21 @@ void drawBoard(FILE *fptr, int resetPosition)
             {
             case 1:
                 readElement(fptr, grid[col][rowWall] >> 3);
-                printf("| %s ", inputFileStructure.shortcut);
+                if(tableMode == 3){
+                 printf("|\x1b[38;5;%sm %s \x1b[0;37m", inputFileStructure.color, inputFileStructure.shortcut);  
+                }else{
+                 printf("| %s ", inputFileStructure.shortcut);
+                }
+                
                 break;
             case 2:
                 readElement(fptr, grid[col][rowWall] >> 3);
-                printf("| %s |", inputFileStructure.shortcut);
+                if(tableMode == 3){
+                 printf("|\x1b[38;5;%sm %s \x1b[0;37m|", inputFileStructure.color, inputFileStructure.shortcut);   
+                }else{
+                 printf("| %s |", inputFileStructure.shortcut);
+                }
+                
                 break;
             case 3:
             case 6:

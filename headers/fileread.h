@@ -10,6 +10,7 @@ struct fileInputData{
     float electronegativity;
     char Group[20];
     char StandardState[20];
+    char color[10];
     char discoveryYear[40];
     char discoverer[40];
     float boilingPoint;

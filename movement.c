@@ -80,7 +80,12 @@ int moveCursor(int XX, int YY)
 void updateCursorPosition(FILE *fprt, int input)
 {
   moveCursor(curentPosition.XX, curentPosition.YY);
-  printf("\033[0m %s \033[0m", inputFileStructure.shortcut);
+  if(tableMode == 3){
+    printf("\x1b[38;5;%sm %s \x1b[0;37m", inputFileStructure.color,  inputFileStructure.shortcut);
+  }else{
+    printf("\x1b[0m %s \033[0m", inputFileStructure.shortcut);
+  }
+  
   cursorCordsUpdate(input);
 
   //number of selected element is saved to int search
@@ -88,5 +93,9 @@ void updateCursorPosition(FILE *fprt, int input)
 
   moveCursor(curentPosition.XX, curentPosition.YY);
   readElement(fprt, search);
-  printf("\033[47;30m %s \033[0m", inputFileStructure.shortcut);
+  if(tableMode == 3){
+    printf("\x1b[48;5;%sm %s \x1b[0;37m", inputFileStructure.color,  inputFileStructure.shortcut);
+  }else{
+    printf("\x1b[47;30m %s \033[0m", inputFileStructure.shortcut);
+  }
 }

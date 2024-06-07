@@ -1,0 +1,9 @@
+Copyright 2024-2025 Sicha Vaclav
+
+Tento software je poskytovan "tak, jak je", bez jakekoliv zaruky. Autor v zadnem pripade nenese odpovednost za jakekoliv skody vznikle pouzivanim tohoto softwaru.
+
+Kazdemu je udeleno povoleni pouzivat tento software pro jakykoliv ucel, vcetne komercnich aplikaci, a volne jej upravovat a dale distribuovat, s vyhradou nasledujicich omezeni:
+
+1. Puvod tohoto softwaru nesmi byt uveden v omyl; nesmite tvrdit, ze jste napsali originalni software.
+2. Zmenene verze musi byt jako takove jasne oznaceny a nesmi byt uvedeny v omyl jako puvodni software.
+3. Toto upozorneni nesmi byt odstraneno ani zmeneno z zadne distribuce.

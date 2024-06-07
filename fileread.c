@@ -26,6 +26,8 @@ int readElement(FILE * fptr, int number){
             strcpy(inputFileStructure.StandardState, elementState);
             char * elementGroup = strtok(NULL, ";");
             strcpy(inputFileStructure.Group, elementGroup);
+            char * elementColor = strtok(NULL, ";");
+            strcpy(inputFileStructure.color, elementColor);
             char * elementDiscoverer = strtok(NULL, ";");        
             strcpy(inputFileStructure.discoverer, elementDiscoverer);
             char * elementYear = strtok(NULL, ";");        

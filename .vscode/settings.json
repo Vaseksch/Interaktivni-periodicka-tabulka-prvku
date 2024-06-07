@@ -12,7 +12,8 @@
         "stdarg.h": "c",
         "string.h": "c",
         "printdetails.h": "c",
-        "molecularweight.h": "c"
+        "molecularweight.h": "c",
+        "colors.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
