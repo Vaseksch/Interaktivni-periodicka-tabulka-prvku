@@ -1,15 +1,15 @@
 
-Interactive Periodic Table of Elements
-Description:
+# Interactive Periodic Table of Elements
+## Description:
 
 This program is designed for educational purposes, particularly in the fields of chemistry and, to a lesser extent, molecular physics. 
 The molecular weight calculation function was added 2.0
 
-Controls:
+## Controls:
 
-Navigate the periodic table using arrow keys or WASD keys.
-Switch between different table modes using PG_UP and PG_DN keys.
-HOME to show molecular weight caulculation.
+- Navigate the periodic table using arrow keys or WASD keys.
+- Switch between different table modes using PG_UP and PG_DN keys.
+- HOME to show molecular weight caulculation.
 
 
 V2.0
